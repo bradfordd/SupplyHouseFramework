@@ -13,13 +13,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CategorySearchPage extends BasePageObject {
 	protected WebDriver driver;
+	protected final String itemCategoriesXpath = "//a[@color='blueLink' and @font-weight='bold']/div[2]/span[1]";
+	protected final String pageTitleXpath = "//h1[@font-size='22,,24,,34']";
+	protected final String breadcrumbsXpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div | /html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/a";
 	
 	public CategorySearchPage(WebDriver driver, WebDriverWait wait) throws InterruptedException {
 		super(driver);
-		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath("//h1[@class='Box-sc-1z9git-0 dfVmTn']")));
-		driver.findElement(By.xpath("//h1[@class='Box-sc-1z9git-0 dfVmTn']")).click();
-		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath("//a[@class='Box-sc-1z9git-0 fDOPef CategoryTileLink-sc-rz7j01-0 fkxXHf Box-sc-1z9git-0 Flex-sc-1qhr4qe-0 CategoryTile__CategoryTileContainerFlex-sc-1giyifi-2 gUKiTB dNxDHg goVhUA']")));
-		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath("//div[@class='Box-sc-1z9git-0 BreadcrumbLinks__BreadcrumbLinkContainer-sc-1251clj-0 fyQmaI fldFAB']//a")));
+		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(pageTitleXpath)));
+		driver.findElement(By.xpath(pageTitleXpath)).click();
+		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(itemCategoriesXpath)));
+		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(breadcrumbsXpath)));
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -43,24 +46,15 @@ public class CategorySearchPage extends BasePageObject {
 		return li;
 	}
 	
-	@FindBy(xpath="//a[@class='Box-sc-1z9git-0 fDOPef CategoryTileLink-sc-rz7j01-0 fkxXHf Box-sc-1z9git-0 Flex-sc-1qhr4qe-0 CategoryTile__CategoryTileContainerFlex-sc-1giyifi-2 gUKiTB dNxDHg goVhUA']")
+	
+	@FindBy(xpath=itemCategoriesXpath)
 	List<WebElement> itemCategories;
 	
-	@FindBy(xpath="//h1[@class='Box-sc-1z9git-0 dfVmTn']")
+	@FindBy(xpath=pageTitleXpath)
 	WebElement pageTitle;
 			
-	@FindBy(xpath="//div[@class='Box-sc-1z9git-0 hzZBOh']")
+	@FindBy(xpath=breadcrumbsXpath)
 	List<WebElement> breadcrumbs;
-	
-	@FindBy(xpath="//div[@class='Box-sc-1z9git-0 BreadcrumbLinks__BreadcrumbLinkContainer-sc-1251clj-0 fyQmaI fldFAB']//a")
-	List<WebElement> breadcrumbLinks;
-	
-
-	
-	
-	public int getNumberOfBreadCrumbLinks() {
-		return breadcrumbLinks.size();
-	}
 	
 	public int getNumberOfBreadCrumbs() {
 		return breadcrumbs.size();
@@ -92,14 +86,20 @@ public class CategorySearchPage extends BasePageObject {
 		for (int i = 1; i < item.length(); i++) {
 			if (item.charAt(i) == ' ') {
 				answer.append('-');
-				i++;
-				ch = item.charAt(i);
-				ch = Character.toUpperCase(ch);
-				answer.append(ch);
-			} else {
+				if ((i + 1 < item.length()) && Character.isLetter(item.charAt(i + 1))) {
+					i++;
+					ch = item.charAt(i);
+					ch = Character.toUpperCase(ch);
+					answer.append(ch);
+				}
+			} else if (item.charAt(i) == '(' || item.charAt(i) == ')') {
+				continue;
+			}
+			else {
 				answer.append(item.charAt(i));
 			}
 		}
 		return answer.toString();
 	}
+
 }

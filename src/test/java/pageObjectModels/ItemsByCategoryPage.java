@@ -1,5 +1,6 @@
 package pageObjectModels;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -12,12 +13,20 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ItemsByCategoryPage extends BasePageObject{
 	protected WebDriver driver;
+	
+	protected static final String itemLinksXpath = "//a[@class='product-name product-link']";
+	protected static final String itemNameXpath = "//div[@class='desc']/a/strong";
+	protected static final String breadcrumbsXpath = "//div[@id='breadcrumbs']/ol/li";
+	protected static final String breadcrumbLinksXpath = "//div[@id='breadcrumbs']/ol/li//a";
+	protected static final String pageTitleXpath = "//div[@class='header-groupings']/h1";
+	protected static final String itemCountXpath = "//*[@id='result-size-nav']";
+	
 	public ItemsByCategoryPage(WebDriver driver, WebDriverWait wait) {
 		super(driver);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='header-groupings']/h1")));
-		driver.findElement(By.xpath("//div[@class='header-groupings']/h1")).click();
-		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath("//div[@id='breadcrumbs']/ol/li")));
-		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath("//div[@class='desc']/a/strong")));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(pageTitleXpath)));
+		driver.findElement(By.xpath(pageTitleXpath)).click();
+		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(breadcrumbsXpath)));
+		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(itemNameXpath)));
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -62,20 +71,34 @@ public class ItemsByCategoryPage extends BasePageObject{
 		return answer.toString();
 	}
 	
-	@FindBy(xpath="//a[@class='product-name product-link']")
+	public static Boolean isItemPage(WebDriver driver) {
+		try{
+		    driver.findElement(By.xpath(itemCountXpath));
+		    return true;
+
+		} catch(Exception e){
+		    return false;
+		}
+
+	}
+	
+	@FindBy(xpath=itemLinksXpath)
 	List<WebElement> itemLinks;
 	
-	
-	@FindBy(xpath="//div[@class='desc']/a/strong")
+	@FindBy(xpath= itemNameXpath)
 	List<WebElement> itemNames;
 	
-	@FindBy(xpath="//div[@id=\"breadcrumbs\"]/ol/li")
+	@FindBy(xpath=breadcrumbsXpath)
 	List<WebElement> breadcrumbs;
 	
-	@FindBy(xpath="//div[@id='breadcrumbs']/ol/li//a")
+	@FindBy(xpath=breadcrumbLinksXpath)
 	List<WebElement> breadcrumbLinks;
 	
-	@FindBy(xpath="//div[@class='header-groupings']/h1")
+	@FindBy(xpath=pageTitleXpath)
 	WebElement PageTitle;
+	
+	@FindBy(xpath=itemCountXpath)
+	WebElement itemCount;
+	
 	
 }

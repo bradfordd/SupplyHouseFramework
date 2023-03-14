@@ -43,6 +43,16 @@ import org.openqa.selenium.edge.EdgeDriver;
  		}
  	}
  	
+ 	public static Boolean waitForUrlChange(String oldUrl, WebDriver driver) throws InterruptedException {
+ 		for (int i = 0; i < 15; i++) {
+ 			if (driver.getCurrentUrl() != oldUrl) {
+ 				return true;
+ 			}
+ 			Thread.sleep(2000);
+ 		}
+ 		return false;
+ 	}
+ 	
  	public void closeWebDriver() {
  		driver.close();
  	}

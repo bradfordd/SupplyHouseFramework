@@ -11,11 +11,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ProductDetailsPage extends BasePageObject {
+	
+	protected final static String productTitleXpath = "//h1[@font-size='h5,,h4,,h2']";
 
 	public ProductDetailsPage(WebDriver driver, WebDriverWait wait) {
 		super(driver);
-		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath("//h1[@font-size='h5,,h4,,h2']")));
-		driver.findElement(By.xpath("//h1[@font-size='h5,,h4,,h2']")).click();
+		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(productTitleXpath)));
+		driver.findElement(By.xpath(productTitleXpath)).click();
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -24,7 +26,7 @@ public class ProductDetailsPage extends BasePageObject {
 	}
 	
 	
-	@FindBy(xpath="//h1[@font-size='h5,,h4,,h2']")
+	@FindBy(xpath=productTitleXpath)
 	WebElement productTitle;
 
 }
