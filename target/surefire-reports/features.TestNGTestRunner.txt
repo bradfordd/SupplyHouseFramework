@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------
+Test set: features.TestNGTestRunner
+-------------------------------------------------------------------------------
+Tests run: 19, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 715.897 s <<< FAILURE! - in features.TestNGTestRunner
+features.TestNGTestRunner.runScenario["Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"](4)  Time elapsed: 30.033 s  <<< FAILURE!
+org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: element is not attached to the page document
+  (Session info: chrome=111.0.5563.65)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [55b8318b11bdd5941a41d7f8f2732cbf, getElementText {id=26b8125b-e5d7-48a5-b258-3ec9455445d3}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.19 (378a38865270..., userDataDir: C:\Users\lordr\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54841}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54841/devtoo..., se:cdpVersion: 111.0.5563.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (55b8318b11bdd5941a41d7f8f2732cbf)] -> xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div | /html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/a]
+Session ID: 55b8318b11bdd5941a41d7f8f2732cbf
+
+features.TestNGTestRunner.runScenario["Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"](19)  Time elapsed: 66.564 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //h1[@font-size='22,,24,,34'] (tried for 30 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//h1[@font-size='22,,24,,34']"}
+  (Session info: chrome=111.0.5563.65)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ef8c1eb57f1f2218db45598ccaaac288, findElement {using=xpath, value=//h1[@font-size='22,,24,,34']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.19 (378a38865270..., userDataDir: C:\Users\lordr\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60085}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60085/devtoo..., se:cdpVersion: 111.0.5563.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef8c1eb57f1f2218db45598ccaaac288
+

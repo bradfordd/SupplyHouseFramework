@@ -5,7 +5,7 @@
     <classes>
       <class name="features.TestNGTestRunner">
         <methods>
-          <include name="runScenario" invocation-numbers="18"/>
+          <include name="runScenario" invocation-numbers="15 18"/>
           <include name="tearDownClass"/>
           <include name="setUpClass"/>
         </methods>

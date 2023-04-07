@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="19" passed="18" failed="1" skipped="0">
+<testng-results ignored="0" total="19" passed="17" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-14T06:04:32Z" name="Default suite" finished-at="2023-03-14T06:17:17Z" duration-ms="764592">
+  <suite started-at="2023-04-07T23:03:27Z" name="Default suite" finished-at="2023-04-07T23:16:21Z" duration-ms="774459">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-03-14T06:04:32Z" name="Default test" finished-at="2023-03-14T06:17:17Z" duration-ms="764592">
+    <test started-at="2023-04-07T23:03:27Z" name="Default test" finished-at="2023-04-07T23:16:21Z" duration-ms="774459">
       <class name="features.TestNGTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:04:32Z" name="setUpClass" finished-at="2023-03-14T06:04:33Z" duration-ms="656" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:03:27Z" name="setUpClass" finished-at="2023-04-07T23:03:28Z" duration-ms="583" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@32e9c3af]]>
+                <![CDATA[org.testng.TestRunner@53c9541c]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:04:33Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-14T06:05:14Z" duration-ms="41244" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:03:28Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-07T23:04:13Z" duration-ms="44952" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:05:14Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-14T06:06:01Z" duration-ms="46917" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:04:13Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-07T23:04:58Z" duration-ms="45912" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +53,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:06:01Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-14T06:06:40Z" duration-ms="39432" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:04:58Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-07T23:05:27Z" duration-ms="28763" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,7 +69,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:06:40Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-14T06:07:14Z" duration-ms="33511" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:05:27Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-07T23:05:58Z" duration-ms="30820" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -85,7 +85,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:07:14Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-14T06:07:52Z" duration-ms="38571" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:05:58Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-07T23:06:30Z" duration-ms="32455" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -101,7 +101,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:07:52Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-14T06:08:30Z" duration-ms="37546" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:06:30Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-07T23:07:09Z" duration-ms="38602" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -117,7 +117,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:08:30Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-14T06:09:09Z" duration-ms="39061" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:07:09Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-07T23:07:48Z" duration-ms="38525" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -133,7 +133,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:09:09Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-14T06:09:41Z" duration-ms="32112" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:07:48Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-07T23:08:27Z" duration-ms="38981" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -149,7 +149,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:09:41Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-14T06:10:19Z" duration-ms="38198" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:08:27Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-07T23:09:05Z" duration-ms="38097" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -165,7 +165,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:10:19Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-14T06:10:57Z" duration-ms="37320" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:09:05Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-07T23:09:43Z" duration-ms="38394" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -181,7 +181,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:10:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-14T06:11:35Z" duration-ms="38537" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:09:43Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-07T23:10:18Z" duration-ms="34443" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -197,7 +197,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:11:35Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-14T06:12:15Z" duration-ms="39796" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:10:18Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-07T23:10:52Z" duration-ms="34551" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -213,7 +213,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:12:15Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-14T06:13:12Z" duration-ms="56670" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:10:52Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-07T23:11:48Z" duration-ms="56282" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -229,7 +229,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:13:12Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-14T06:13:52Z" duration-ms="40512" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:11:48Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-07T23:12:29Z" duration-ms="40580" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -245,7 +245,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:13:52Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-14T06:14:40Z" duration-ms="47452" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:12:29Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-07T23:13:10Z" duration-ms="41155" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -261,7 +261,108 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:14:40Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-14T06:15:19Z" duration-ms="39654" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:13:10Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-07T23:14:21Z" duration-ms="71350" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Searching for item and navigating to item Product Details Page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Search for an item and click on an item on Amazon"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of element located by: By.xpath: //h1[@font-size='22,,24,,34'] (tried for 30 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //h1[@font-size='22,,24,,34'] (tried for 30 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at pageObjectModels.CategorySearchPage.<init>(CategorySearchPage.java:22)
+at StepDefinitions.ItemSearchSteps.user_is_navigated_to_item_search_results_page_selects_first_item_on_search_page(ItemSearchSteps.java:60)
+at ✽.User is navigated to item category select Page, selects first category on page(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:9)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h1[@font-size='22,,24,,34']"}
+  (Session info: chrome=111.0.5563.148)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ecfb94f372bf55932bce573de8434043, findElement {using=xpath, value=//h1[@font-size='22,,24,,34']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.148, chrome: {chromedriverVersion: 111.0.5563.19 (378a38865270..., userDataDir: C:\Users\lordr\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49844}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49844/devtoo..., se:cdpVersion: 111.0.5563.148, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ecfb94f372bf55932bce573de8434043
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:174)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+at pageObjectModels.CategorySearchPage.<init>(CategorySearchPage.java:22)
+at StepDefinitions.ItemSearchSteps.user_is_navigated_to_item_search_results_page_selects_first_item_on_search_page(ItemSearchSteps.java:60)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
+at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
+at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
+at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:14:21Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-07T23:15:06Z" duration-ms="44267" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -277,7 +378,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:15:19Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-14T06:15:57Z" duration-ms="37848" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:15:06Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-07T23:15:42Z" duration-ms="36171" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -293,23 +394,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:15:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-14T06:16:35Z" duration-ms="37565" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Searching for item and navigating to item Product Details Page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Search for an item and click on an item on Amazon"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:16:35Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-14T06:17:17Z" duration-ms="41875" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:15:42Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-07T23:16:21Z" duration-ms="39421" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -334,14 +419,14 @@ at pageObjectModels.CategorySearchPage.<init>(CategorySearchPage.java:22)
 at StepDefinitions.ItemSearchSteps.user_searches_for_item(ItemSearchSteps.java:41)
 at ✽.User Searches For Well Tanks(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:8)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h1[@font-size='22,,24,,34']"}
-  (Session info: chrome=111.0.5563.65)
+  (Session info: chrome=111.0.5563.148)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.8.0', revision: '267030adea'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [620cbbdbf93f12ada5663e1e8b6fcd72, findElement {using=xpath, value=//h1[@font-size='22,,24,,34']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.19 (378a38865270..., userDataDir: C:\Users\lordr\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59990}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59990/devtoo..., se:cdpVersion: 111.0.5563.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 620cbbdbf93f12ada5663e1e8b6fcd72
+Command: [172bd1df8ef84bc840a935fb9d390cec, findElement {using=xpath, value=//h1[@font-size='22,,24,,34']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.148, chrome: {chromedriverVersion: 111.0.5563.19 (378a38865270..., userDataDir: C:\Users\lordr\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51274}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51274/devtoo..., se:cdpVersion: 111.0.5563.148, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 172bd1df8ef84bc840a935fb9d390cec
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
@@ -410,7 +495,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-03-14T06:17:17Z" name="tearDownClass" finished-at="2023-03-14T06:17:17Z" duration-ms="62" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:features.TestNGTestRunner@65987993]" started-at="2023-04-07T23:16:21Z" name="tearDownClass" finished-at="2023-04-07T23:16:21Z" duration-ms="73" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
