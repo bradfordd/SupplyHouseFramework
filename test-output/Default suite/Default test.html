@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>17/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>12/7/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Apr 07 19:03:27 EDT 2023</td>
+<td>Started on:</td><td>Fri Apr 07 19:55:43 EDT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>774 seconds (774459 ms)</td>
+<tr><td>Total time:</td><td>703 seconds (703466 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,163 +76,111 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //h1[@font-size=&apos;22,,24,,34&apos;] (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at pageObjectModels.CategorySearchPage.&lt;init&gt;(CategorySearchPage.java:22)
-	at StepDefinitions.ItemSearchSteps.user_is_navigated_to_item_search_results_page_selects_first_item_on_search_page(ItemSearchSteps.java:60)
+<td><div><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at StepDefinitions.ItemSearchSteps.user_is_navigated_to_item_search_results_page_selects_first_item_on_search_page(ItemSearchSteps.java:67)
 	at ✽.User is navigated to item category select Page, selects first category on page(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:9)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[@font-size=&apos;22,,24,,34&apos;]&quot;}
-  (Session info: chrome=111.0.5563.148)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ecfb94f372bf55932bce573de8434043, findElement {using=xpath, value=//h1[@font-size=&apos;22,,24,,34&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.148, chrome: {chromedriverVersion: 111.0.5563.19 (378a38865270..., userDataDir: C:\Users\lordr\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49844}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49844/devtoo..., se:cdpVersion: 111.0.5563.148, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ecfb94f372bf55932bce573de8434043
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:174)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	at pageObjectModels.CategorySearchPage.&lt;init&gt;(CategorySearchPage.java:22)
-	at StepDefinitions.ItemSearchSteps.user_is_navigated_to_item_search_results_page_selects_first_item_on_search_page(ItemSearchSteps.java:60)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace36924735", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace36924735'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //h1[@font-size=&apos;22,,24,,34&apos;] (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at pageObjectModels.CategorySearchPage.&lt;init&gt;(CategorySearchPage.java:22)
-	at StepDefinitions.ItemSearchSteps.user_is_navigated_to_item_search_results_page_selects_first_item_on_search_page(ItemSearchSteps.java:60)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1250950517", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1250950517'><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at StepDefinitions.ItemSearchSteps.user_is_navigated_to_item_search_results_page_selects_first_item_on_search_page(ItemSearchSteps.java:67)
 	at ✽.User is navigated to item category select Page, selects first category on page(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:9)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[@font-size=&apos;22,,24,,34&apos;]&quot;}
-  (Session info: chrome=111.0.5563.148)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ecfb94f372bf55932bce573de8434043, findElement {using=xpath, value=//h1[@font-size=&apos;22,,24,,34&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.148, chrome: {chromedriverVersion: 111.0.5563.19 (378a38865270..., userDataDir: C:\Users\lordr\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49844}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49844/devtoo..., se:cdpVersion: 111.0.5563.148, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ecfb94f372bf55932bce573de8434043
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:174)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	at pageObjectModels.CategorySearchPage.&lt;init&gt;(CategorySearchPage.java:22)
-	at StepDefinitions.ItemSearchSteps.user_is_navigated_to_item_search_results_page_selects_first_item_on_search_page(ItemSearchSteps.java:60)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>71</td>
+<td>38</td>
+<td>features.TestNGTestRunner@65987993</td></tr>
+<tr>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
+<td><div><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:78)
+	at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:10)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1880484847", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1880484847'><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:78)
+	at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:10)
+</pre></div></td>
+<td>35</td>
+<td>features.TestNGTestRunner@65987993</td></tr>
+<tr>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
+<td><div><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at StepDefinitions.ItemSearchSteps.user_searches_for_item(ItemSearchSteps.java:46)
+	at ✽.User Searches For Faucet Parts(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1529580934", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1529580934'><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at StepDefinitions.ItemSearchSteps.user_searches_for_item(ItemSearchSteps.java:46)
+	at ✽.User Searches For Faucet Parts(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:8)
+</pre></div></td>
+<td>31</td>
+<td>features.TestNGTestRunner@65987993</td></tr>
+<tr>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
+<td><div><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:78)
+	at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:10)
+</pre></div><a href='#' onClick='toggleBox("stack-trace650482504", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace650482504'><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:78)
+	at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:10)
+</pre></div></td>
+<td>36</td>
+<td>features.TestNGTestRunner@65987993</td></tr>
+<tr>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
+<td><div><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at StepDefinitions.ItemSearchSteps.user_is_navigated_to_item_search_results_page_selects_first_item_on_search_page(ItemSearchSteps.java:62)
+	at ✽.User is navigated to item category select Page, selects first category on page(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:9)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1995042520", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1995042520'><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at StepDefinitions.ItemSearchSteps.user_is_navigated_to_item_search_results_page_selects_first_item_on_search_page(ItemSearchSteps.java:62)
+	at ✽.User is navigated to item category select Page, selects first category on page(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:9)
+</pre></div></td>
+<td>37</td>
+<td>features.TestNGTestRunner@65987993</td></tr>
+<tr>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
+<td><div><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at StepDefinitions.ItemSearchSteps.user_searches_for_item(ItemSearchSteps.java:43)
+	at ✽.User Searches For Water Filters(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace716699209", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace716699209'><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at StepDefinitions.ItemSearchSteps.user_searches_for_item(ItemSearchSteps.java:43)
+	at ✽.User Searches For Water Filters(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:8)
+</pre></div></td>
+<td>31</td>
 <td>features.TestNGTestRunner@65987993</td></tr>
 <tr>
 <td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
@@ -248,9 +196,9 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [172bd1df8ef84bc840a935fb9d390cec, findElement {using=xpath, value=//h1[@font-size=&apos;22,,24,,34&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.148, chrome: {chromedriverVersion: 111.0.5563.19 (378a38865270..., userDataDir: C:\Users\lordr\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51274}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51274/devtoo..., se:cdpVersion: 111.0.5563.148, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 172bd1df8ef84bc840a935fb9d390cec
+Command: [f7be930b205e22bbc58182f1c0aa7947, findElement {using=xpath, value=//h1[@font-size=&apos;22,,24,,34&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.148, chrome: {chromedriverVersion: 111.0.5563.19 (378a38865270..., userDataDir: C:\Users\lordr\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61135}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61135/devtoo..., se:cdpVersion: 111.0.5563.148, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f7be930b205e22bbc58182f1c0aa7947
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
@@ -313,8 +261,8 @@ Session ID: 172bd1df8ef84bc840a935fb9d390cec
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace281759815", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace281759815'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //h1[@font-size=&apos;22,,24,,34&apos;] (tried for 30 second(s) with 500 milliseconds interval)
+</pre></div><a href='#' onClick='toggleBox("stack-trace530750366", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace530750366'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //h1[@font-size=&apos;22,,24,,34&apos;] (tried for 30 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
 	at pageObjectModels.CategorySearchPage.&lt;init&gt;(CategorySearchPage.java:22)
@@ -326,9 +274,9 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [172bd1df8ef84bc840a935fb9d390cec, findElement {using=xpath, value=//h1[@font-size=&apos;22,,24,,34&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.148, chrome: {chromedriverVersion: 111.0.5563.19 (378a38865270..., userDataDir: C:\Users\lordr\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51274}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51274/devtoo..., se:cdpVersion: 111.0.5563.148, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 172bd1df8ef84bc840a935fb9d390cec
+Command: [f7be930b205e22bbc58182f1c0aa7947, findElement {using=xpath, value=//h1[@font-size=&apos;22,,24,,34&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.148, chrome: {chromedriverVersion: 111.0.5563.19 (378a38865270..., userDataDir: C:\Users\lordr\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61135}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61135/devtoo..., se:cdpVersion: 111.0.5563.148, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f7be930b205e22bbc58182f1c0aa7947
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
@@ -392,7 +340,7 @@ Session ID: 172bd1df8ef84bc840a935fb9d390cec
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>39</td>
+<td>38</td>
 <td>features.TestNGTestRunner@65987993</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -405,82 +353,57 @@ Session ID: 172bd1df8ef84bc840a935fb9d390cec
 <tr>
 <td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
 <td></td>
-<td>44</td>
+<td>37</td>
 <td>features.TestNGTestRunner@65987993</td></tr>
 <tr>
 <td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
 <td></td>
-<td>45</td>
+<td>36</td>
 <td>features.TestNGTestRunner@65987993</td></tr>
 <tr>
 <td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
 <td></td>
-<td>28</td>
+<td>36</td>
 <td>features.TestNGTestRunner@65987993</td></tr>
 <tr>
 <td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
 <td></td>
-<td>30</td>
+<td>36</td>
 <td>features.TestNGTestRunner@65987993</td></tr>
 <tr>
 <td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
 <td></td>
-<td>32</td>
+<td>37</td>
 <td>features.TestNGTestRunner@65987993</td></tr>
 <tr>
 <td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
 <td></td>
-<td>38</td>
+<td>37</td>
 <td>features.TestNGTestRunner@65987993</td></tr>
 <tr>
 <td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
 <td></td>
-<td>38</td>
+<td>35</td>
 <td>features.TestNGTestRunner@65987993</td></tr>
 <tr>
 <td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
 <td></td>
-<td>38</td>
+<td>35</td>
 <td>features.TestNGTestRunner@65987993</td></tr>
 <tr>
 <td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
 <td></td>
-<td>38</td>
+<td>43</td>
 <td>features.TestNGTestRunner@65987993</td></tr>
 <tr>
 <td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
 <td></td>
-<td>38</td>
+<td>42</td>
 <td>features.TestNGTestRunner@65987993</td></tr>
 <tr>
 <td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
 <td></td>
-<td>34</td>
-<td>features.TestNGTestRunner@65987993</td></tr>
-<tr>
-<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
-<td></td>
-<td>34</td>
-<td>features.TestNGTestRunner@65987993</td></tr>
-<tr>
-<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
-<td></td>
-<td>56</td>
-<td>features.TestNGTestRunner@65987993</td></tr>
-<tr>
-<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
-<td></td>
-<td>40</td>
-<td>features.TestNGTestRunner@65987993</td></tr>
-<tr>
-<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
-<td></td>
-<td>41</td>
-<td>features.TestNGTestRunner@65987993</td></tr>
-<tr>
-<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>
-<td></td>
-<td>44</td>
+<td>36</td>
 <td>features.TestNGTestRunner@65987993</td></tr>
 <tr>
 <td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for an item and click on an item on Amazon"</td>

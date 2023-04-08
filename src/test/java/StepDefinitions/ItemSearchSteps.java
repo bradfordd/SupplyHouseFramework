@@ -40,10 +40,10 @@ public class ItemSearchSteps extends RunWeb{
 		Assert.assertTrue(waitForUrlChange(oldUrl, driver));
 		c = new CategorySearchPage(driver, wait);
 		String pageTitle = c.getPageTitle();
-		//Assert.assertTrue(pageTitle.toLowerCase().contains(item.toLowerCase()));
+		Assert.assertTrue(pageTitle.toLowerCase().contains(item.toLowerCase()));
 		ArrayList<String> breadCrumbValues= c.getBreadCrumbText();
 		String getFinalBreadcrumbText = breadCrumbValues.get(breadCrumbValues.size() - 1);
-		//Assert.assertTrue(getFinalBreadcrumbText.toLowerCase().contains(item.toLowerCase()));
+		Assert.assertTrue(getFinalBreadcrumbText.toLowerCase().contains(item.toLowerCase()));
 	}
 	@Given("User is navigated to item category select Page, selects first category on page")
 	public void user_is_navigated_to_item_search_results_page_selects_first_item_on_search_page() throws InterruptedException {
@@ -59,12 +59,12 @@ public class ItemSearchSteps extends RunWeb{
 		    }
 		    c = new CategorySearchPage(driver, wait);
 		    String finalBreadCrumbValue = c.getFinalBreadCrumbText();
-		    //Assert.assertTrue(finalBreadCrumbValue.toLowerCase().contains(categoryName.toLowerCase()));
+		    Assert.assertTrue(finalBreadCrumbValue.toLowerCase().contains(categoryName.toLowerCase()));
 			String pageTitle = c.getPageTitle();
-			//Assert.assertTrue(pageTitle.toLowerCase().contains(pageTitle.toLowerCase()));
+			Assert.assertTrue(pageTitle.toLowerCase().contains(pageTitle.toLowerCase()));
 			ArrayList<String> breadCrumbValues= c.getBreadCrumbText();
 			String getFinalBreadcrumbText = breadCrumbValues.get(breadCrumbValues.size() - 1);
-			//Assert.assertTrue(getFinalBreadcrumbText.toLowerCase().contains(pageTitle.toLowerCase()));
+			Assert.assertTrue(getFinalBreadcrumbText.toLowerCase().contains(pageTitle.toLowerCase()));
 	    }
     	i = new ItemsByCategoryPage(driver, wait);
 	    selectedItemName = i.getItemOnPageName(0);
@@ -75,7 +75,7 @@ public class ItemSearchSteps extends RunWeb{
 	public void product_details_page_corresponding_with_selected_entry_is_displayed() {
 		p = new ProductDetailsPage(driver, wait);
 		String productName = p.getProductName();
-		//Assert.assertTrue(productName.toLowerCase().contains(selectedItemName.toLowerCase()));
+		Assert.assertTrue(productName.toLowerCase().contains(selectedItemName.toLowerCase()));
 	}
 	
 	@After("@WebTest")

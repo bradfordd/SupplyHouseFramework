@@ -1,5 +1,3 @@
-"# SupplyHouseFramework" 
-
 Requirements:
 jdk 11
 Cucumber-java 7.5.0
@@ -8,11 +6,34 @@ testng 6.14.3
 Selenium java 4.8.0
 cucumber-testng 7.5.0
 Apache Maven 3.8.6
+SupplyHouseFramework
+This repository contains an automation framework for the Supply House web application, using Java, Selenium, and Cucumber. The framework aims to provide comprehensive end-to-end testing for the application, ensuring that all functionalities work as expected.
 
-How to run this on your machine:
-Install Maven on your machine.
-Download this code repository.
-cd <Directory of code repository>
+Table of Contents
+Getting Started
+Running Tests
+Getting Started
+To set up the project locally, follow these steps:
+
+Clone the repository:
+bash
+Copy code
+git clone https://github.com/bradfordd/SupplyHouseFramework.git
+Navigate to the project directory:
+bash
+Copy code
+cd SupplyHouseFramework
+Import the project into your favorite Java IDE (e.g., IntelliJ IDEA or Eclipse) as a Maven project.
+
+Ensure that you have the required JDK version installed and configured in your IDE.
+
+Running Tests
+To run the test suite from your IDE, follow these steps:
+
+Locate the test runner class (usually named TestRunner or similar) in the src/test/java directory.
+
+Right-click on the test runner class and select 'Run' or 'Debug' to execute the tests.
+
+Alternatively, you can run the tests from the command line using Maven:
+
 mvn test
-
-That's it!
