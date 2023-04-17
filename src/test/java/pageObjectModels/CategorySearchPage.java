@@ -1,5 +1,6 @@
 package pageObjectModels;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,10 +18,10 @@ public class CategorySearchPage extends BasePageObject {
 	protected final String pageTitleXpath = "//h1[@font-size='22,,24,,34']";
 	protected final String breadcrumbsXpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div | /html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/a";
 	
-	public CategorySearchPage(WebDriver driver, WebDriverWait wait) throws InterruptedException {
+	public CategorySearchPage(WebDriver driver) throws InterruptedException {
 		super(driver);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(pageTitleXpath)));
-		driver.findElement(By.xpath(pageTitleXpath)).click();
 		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(itemCategoriesXpath)));
 		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(breadcrumbsXpath)));
 		PageFactory.initElements(driver, this);

@@ -21,8 +21,9 @@ public class ItemsByCategoryPage extends BasePageObject{
 	protected static final String pageTitleXpath = "//div[@class='header-groupings']/h1";
 	protected static final String itemCountXpath = "//*[@id='result-size-nav']";
 	
-	public ItemsByCategoryPage(WebDriver driver, WebDriverWait wait) {
+	public ItemsByCategoryPage(WebDriver driver) {
 		super(driver);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(pageTitleXpath)));
 		driver.findElement(By.xpath(pageTitleXpath)).click();
 		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(breadcrumbsXpath)));

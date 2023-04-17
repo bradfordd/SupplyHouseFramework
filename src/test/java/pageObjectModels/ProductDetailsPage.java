@@ -1,5 +1,6 @@
 package pageObjectModels;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -14,8 +15,9 @@ public class ProductDetailsPage extends BasePageObject {
 	
 	protected final static String productTitleXpath = "//h1[@font-size='h5,,h4,,h2']";
 
-	public ProductDetailsPage(WebDriver driver, WebDriverWait wait) {
+	public ProductDetailsPage(WebDriver driver) {
 		super(driver);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(productTitleXpath)));
 		driver.findElement(By.xpath(productTitleXpath)).click();
 		PageFactory.initElements(driver, this);
