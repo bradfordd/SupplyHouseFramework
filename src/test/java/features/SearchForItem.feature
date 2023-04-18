@@ -12,23 +12,23 @@ Feature: Search for a given product category and clicks subcategories until item
 Examples:
     |  item      |
 		|	Faucet Parts |
-#	  |  Access Doors | 
-#		|	Expansion Tanks |
-#		|	Chemicals |
-#		|	Backflow |
-#		|	Flush Valves |
-#		|	Outlet Boxes |
-#		|	PEX Plumbing |
-#		|	Pipe |
-#		|	Pipe Hangers |
-#		|	Pumps |
-#		|	Toilet Parts |
-#		|	Tubular |
-#		|	Valves |
-#		|	Water Filters |
-#		|	Water Heaters |
-#		|	Water Heater Parts |
-#		|	Well Tanks |
+	  |  Access Doors | 
+		|	Expansion Tanks |
+		|	Chemicals |
+		|	Backflow |
+		|	Flush Valves |
+		|	Outlet Boxes |
+		|	PEX Plumbing |
+		|	Pipe |
+		|	Pipe Hangers |
+		|	Pumps |
+		|	Toilet Parts |
+		|	Tubular |
+		|	Valves |
+		|	Water Filters |
+		|	Water Heaters |
+		|	Water Heater Parts |
+		|	Well Tanks |
 
 
 

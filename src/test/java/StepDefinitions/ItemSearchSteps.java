@@ -1,24 +1,31 @@
 package StepDefinitions;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.exec.util.StringUtils;
+import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
 import automationUtils.RunWeb;
 import io.cucumber.java.After;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pageObjectModels.CategorySearchPage;
 import pageObjectModels.ItemsByCategoryPage;
 import pageObjectModels.ProductDetailsPage;
 import pageObjectModels.SupplyHouseHomePage;
+import utils.GenericUtils;
 
 public class ItemSearchSteps extends RunWeb{
 	SupplyHouseHomePage s;
@@ -115,8 +122,22 @@ public class ItemSearchSteps extends RunWeb{
 	}
 	
 	@After("@WebTest")
-	public void Aftervalidation()
+	public void Aftervalidation(Scenario scenario) throws IOException
 	{
+		
+		if (scenario.isFailed()) {
+			StringBuilder sb = new StringBuilder();
+			sb.append(scenario.getName() + "-");
+			for (Map.Entry<String, String> entry : scenarioParams.entrySet()) {
+	            String temp = entry.getKey() + "- " + entry.getValue();
+	            sb.append(temp);
+	        }
+			sb.append(".png");
+			File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			String filePathString = "C:\\Users\\lordr\\AppiumWorkspace\\AmazonFramework\\Automation\\target\\screenshots\\" + sb.toString();
+			filePathString = GenericUtils.replaceSpacesWithUnderscores(filePathString);
+			FileUtils.copyFile(srcFile, new File(filePathString));
+		}
 		closeWebDriver();
 	}
 	
@@ -129,4 +150,7 @@ public class ItemSearchSteps extends RunWeb{
         }
 		return sb.toString();
 	}
+	
+	
+	
 }
