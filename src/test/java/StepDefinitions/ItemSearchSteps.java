@@ -9,11 +9,11 @@ import java.util.Map;
 
 import org.apache.commons.exec.util.StringUtils;
 import org.apache.commons.io.FileUtils;
-import org.junit.Assert;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import automationUtils.RunWeb;
@@ -30,13 +30,25 @@ import utils.GenericUtils;
 public class ItemSearchSteps extends RunWeb{
 	SupplyHouseHomePage s;
 	CategorySearchPage c;
-	WebDriverWait wait;
 	ItemsByCategoryPage i;
 	ProductDetailsPage p;
 	String selectedItemName;
 	String item = "";
 	Map<String, String> scenarioParams = new HashMap<String, String>();
 	SoftAssert softAssert = new SoftAssert();
+	@Given("User Selects (.*?) then selects (.*?)$")
+	public void user_selects_faucet_parts_then_selects_test(String navbarCategory, String subCategory) throws InterruptedException {
+		s = new SupplyHouseHomePage(driver);
+		scenarioParams.put("navbarCategory", navbarCategory);
+		scenarioParams.put("subCategory", subCategory);
+		Assert.assertTrue(s.hoverOverNavBarElementAndSelectCategory(navbarCategory, subCategory), 
+				String.format(
+						"NavBar element navigation failed: %s",
+						getFormattedScenarioParams()
+						)
+				);	
+		c = new CategorySearchPage(driver);
+	}
 	@Given("User Navigates to SupplyHouse HomePage without being logging in")
 	public void user_navigates_to_SupplyHouse_home_page_without_being_logging_in() {
 		initializeWebDriver("Chrome");
