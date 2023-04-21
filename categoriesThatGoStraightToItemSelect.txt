@@ -1,0 +1,119 @@
+Plumbing:
+Arrestors
+Expansion Tanks
+Faucets and Shower
+Fire Sprinklers
+Grease Traps
+Pipe Insulation
+Solder
+Stops and Risers
+Well Tanks
+
+Heating:
+Air Eliminators
+Aquastats
+Boilers
+Boiler Trim
+Expansion Tanks
+Flow Switches
+Flow Valves
+Heat Exchangers
+Low Water Cutoffs
+Mixing Valves
+Switching Relays
+Water Feeders
+Zone Valves
+Gas Cocks
+PE Gas Pipe
+Thermocouples
+Undeground Gas
+Gauges
+Pipe Insulation
+Thermostats
+Transformers
+Unit Heaters
+Air Valves
+
+HVAC:
+Chemicals
+Compressors
+Condensate Pumps
+Filters
+HVAC Equipment
+Line Sets
+Range Hoods
+Thermostats
+Temp Controllers
+
+PEX:
+Packages
+Tubing
+Insulation
+Tubing
+
+Fittings:
+ABS DMV
+Black
+Black (Import)
+Brass
+Compression
+Copper
+Copper ACR
+CPVC
+Flare
+Flexible
+Galvanized
+Galvanized (Import)
+Garden Hose
+MegaPress
+MegaPressG
+No Hub Couplings
+ProPress
+Push-Fit Bluefin
+Push-Fit Sharkbite
+PVC DWV
+PVC Insert
+PVC Sched 40
+PVC SChed 80
+Water Service
+Black
+Black (Import)
+Brass
+Chrome
+Dielectric
+Galvanized
+PVC Sched 80
+Stainless Steel
+Stainless Steel (import)
+
+Valves:
+Ball Valves
+Boiler Drains
+Check Valves
+CPVC Ball Valves
+Gas Cocks
+Gate Valves
+Hose Bibbs
+PVC Ball Valves
+Sillcocks
+Stops & Risers
+Wash Machine Valve
+Wye Strainers
+
+Thermostat:
+Aprilaire       
+Aube            
+Braeburn        
+Ecobee          
+Guards & Plates 
+Honeywell       
+ICM             
+Johnson Controls
+Lux             
+PECO            
+Robertshaw      
+Tekmar          
+Uponor          
+Venstar
+White Rodgers   
+Wi-Fi           

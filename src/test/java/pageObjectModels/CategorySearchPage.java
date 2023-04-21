@@ -16,8 +16,8 @@ public class CategorySearchPage extends BasePageObject {
 	protected WebDriver driver;
 	protected final String itemCategoriesXpath = "//a[@color='blueLink' and @font-weight='bold']/div[2]/span[1]";
 	protected final String pageTitleXpath = "//h1[@font-size='22,,24,,34']";
-	protected final String breadcrumbsXpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div | /html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/a";
-	
+	//protected final String breadcrumbsXpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div | /html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/a";
+	protected final String breadcrumbsXpath = "//div[contains(@class, 'Box-sc-1z9git-0 hzZBOh')]";
 	public CategorySearchPage(WebDriver driver) throws InterruptedException {
 		super(driver);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));

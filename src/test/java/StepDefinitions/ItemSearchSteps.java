@@ -9,8 +9,10 @@ import java.util.Map;
 
 import org.apache.commons.exec.util.StringUtils;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -38,6 +40,7 @@ public class ItemSearchSteps extends RunWeb{
 	SoftAssert softAssert = new SoftAssert();
 	@Given("User Selects (.*?) then selects (.*?)$")
 	public void user_selects_faucet_parts_then_selects_test(String navbarCategory, String subCategory) throws InterruptedException {
+		GenericUtils.clickOnPageBody(driver);
 		s = new SupplyHouseHomePage(driver);
 		scenarioParams.put("navbarCategory", navbarCategory);
 		scenarioParams.put("subCategory", subCategory);

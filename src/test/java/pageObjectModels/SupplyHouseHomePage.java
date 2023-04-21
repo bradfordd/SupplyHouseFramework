@@ -3,6 +3,7 @@ package pageObjectModels;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -102,7 +103,7 @@ public class SupplyHouseHomePage extends BasePageObject{
 			dynamicXpath += navBarPEXXpath;
 			this.hoverOverNavBarPEX();
 			break;
-		case "fitting":
+		case "fittings":
 			dynamicXpath += navBarFittingsXpath;
 			this.hoverOverNavBarFittings();
 			break;
@@ -139,6 +140,8 @@ public class SupplyHouseHomePage extends BasePageObject{
 	
 	public void hoverOverNavBarPlumbing() {
 		WebElement navBarPlumbing = this.getNavBarPlumbing();
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		js.executeScript("var event = new MouseEvent('mouseenter', { 'view': window, 'bubbles': true, 'cancelable': true }); arguments[0].dispatchEvent(event);", navBarPlumbing);
 		actions.moveToElement(navBarPlumbing).perform();
 	}
 	
@@ -244,10 +247,29 @@ public class SupplyHouseHomePage extends BasePageObject{
         wait.until(ExpectedConditions.urlToBe("https://www.supplyhouse.com/"));
 	}
 	
-	public void searchForItem(String item) throws InterruptedException {
+	public Boolean searchForItem(String item) throws InterruptedException {
+		String currUrl = "";
 		topSearchBar.click();
 		Thread.sleep(2000);
 		topSearchBar.sendKeys(item + Keys.ENTER);
+		Thread.sleep(5000);
+		currUrl = driver.getCurrentUrl();
+		if (!currUrl.equals(getHomePageUrl()) && !currUrl.equals(getAlternateHomePageUrl())) {
+			return true;
+		}
+		PageFactory.initElements(driver, this);
+		for (int i = 0 ; i < 3; i++) {
+			PageFactory.initElements(driver, this);
+			topSearchBar.click();
+			Thread.sleep(2000);
+			topSearchBar.sendKeys(item + Keys.ENTER);
+			Thread.sleep(5000);
+			currUrl = driver.getCurrentUrl();
+			if (currUrl != getHomePageUrl() && currUrl != getAlternateHomePageUrl()) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	public static String getHomePageUrl() {
@@ -261,6 +283,8 @@ public class SupplyHouseHomePage extends BasePageObject{
 	
 	@FindBy(id="react-header-search-input")
 	WebElement topSearchBar;
+	
+	protected static final String topSearchBarXpath = "react-header-search-input";
 	
 	@FindBy(id="headerSearchSubmitButton")
 	WebElement searchBarSubmitButton;
