@@ -1,6 +1,9 @@
 package pageObjectModels;
 
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -13,11 +16,17 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 public class SupplyHouseHomePage extends BasePageObject{
-	//protected WebDriver driver;
 	protected Actions actions;
 	protected WebDriverWait wait;
+ 	protected SupplyHouseHomePage s;
+	protected CategorySearchPage c;
+	protected ItemsByCategoryPage i;
+	protected ProductDetailsPage p;
+	Map<String, String> scenarioParams = new HashMap<String, String>();
+	SoftAssert softAssert = new SoftAssert();
 	
 	//protected static final String navBarXpath = "//ul[contains(@class, 'HeaderNavBarUl')]";
 	
@@ -72,7 +81,14 @@ public class SupplyHouseHomePage extends BasePageObject{
     
     @FindBy(xpath = "//ul[contains(@class, 'HeaderNavBarUl')]/li[14]/a")
     protected WebElement navBarOurTeam;
+    
+    @FindBy(xpath = "//a[contains(@class, 'HomePageTrustedBrandLink__HomePageTrustedBrandLinkContainer')]")
+    protected List<WebElement> trustedBrands;
 	
+    public int getNumberOfTrustedBrands() {
+    	return trustedBrands.size();
+    }
+    
 	public SupplyHouseHomePage(WebDriver driver) {
 		super(driver);
 		//driver.findElement(By.xpath("//html")).click();
@@ -80,6 +96,7 @@ public class SupplyHouseHomePage extends BasePageObject{
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		Assert.assertEquals(this.getCurrentUrl(), "https://www.supplyhouse.com/");
 		PageFactory.initElements(driver, this);
+		wait.until(ExpectedConditions.visibilityOfAllElements(trustedBrands));
 	}
 	
 	

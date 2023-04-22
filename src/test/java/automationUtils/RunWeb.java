@@ -1,6 +1,8 @@
  package automationUtils;
 
- import java.util.concurrent.TimeUnit;
+ import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
@@ -8,10 +10,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
  import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.asserts.SoftAssert;
+
+import pageObjectModels.CategorySearchPage;
+import pageObjectModels.ItemsByCategoryPage;
+import pageObjectModels.ProductDetailsPage;
+import pageObjectModels.SupplyHouseHomePage;
 
  public class RunWeb {
  	public String frameworkDirectory = System.getProperty("user.dir");
- 	public WebDriver driver;
+	public WebDriver driver;
  	
  	public void initializeWebDriver(String webBrowser) {
  		webBrowser = webBrowser.toLowerCase();

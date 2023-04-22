@@ -36,6 +36,7 @@ public class ItemSearchSteps extends RunWeb{
 	ProductDetailsPage p;
 	String selectedItemName;
 	String item = "";
+	
 	Map<String, String> scenarioParams = new HashMap<String, String>();
 	SoftAssert softAssert = new SoftAssert();
 	@Given("User Selects (.*?) then selects (.*?)$")
