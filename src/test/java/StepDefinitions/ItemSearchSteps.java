@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.exec.util.StringUtils;
@@ -23,9 +24,11 @@ import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import pageObjectModels.CategorySearchPage;
 import pageObjectModels.ItemsByCategoryPage;
 import pageObjectModels.ProductDetailsPage;
+import pageObjectModels.SearchSpecifications;
 import pageObjectModels.SupplyHouseHomePage;
 import utils.GenericUtils;
 
@@ -53,6 +56,58 @@ public class ItemSearchSteps extends RunWeb{
 				);	
 		c = new CategorySearchPage(driver);
 	}
+	
+	@When("^User Selects (.*) at the HomePage$")
+    public void userSelectsBrandAtHomePage(String brand) throws InterruptedException {
+        s = new SupplyHouseHomePage(driver);
+        s.clickTrustedBrand(brand);
+    }
+
+    @When("^User selects the following parameters: (.*), (.*), (.*), (.*), (.*), (.*), (.*)$")
+    public void userSelectsParameters(String inStockOnly, String productType, String priceRange, String reviewScore, String application, String material, String size) throws InterruptedException {
+    	Map<String, String> map = new HashMap<String, String>();
+//    	map.put("Review Score", reviewScore);
+//    	map.put("In Stock Only", inStockOnly);
+//    	map.put("Product Type", productType);
+//    	map.put("Price Range", priceRange);
+//    	map.put("Application", application);
+//    	map.put("Material", material);
+    	map.put("Size", size);
+//    	String[] testCases = {
+//                "5 Star",
+//                "6 Star",
+//                "4 Star",
+//                "3 Star",
+//                "2 Star",
+//                "1 Star",
+//                reviewScore
+//        };
+//
+//        for (String testCase : testCases) {
+//            int firstInteger = SearchSpecifications.findFirstIntegerBetweenOneAndFive(testCase);
+//            System.out.println("The first integer between 1 and 5 in the input string \"" + testCase + "\" is: " + firstInteger);
+//        }
+//    	map.put("Size", size);
+    	i = new ItemsByCategoryPage(driver);
+    	Thread.sleep(2000);
+    	SearchSpecifications s = new SearchSpecifications(driver);
+    	Thread.sleep(2000);
+    	s.makeSelections(map);
+    	i.reinitializeItemsOnPage();
+    	i.selectItemOnPage(0);
+    	p = new ProductDetailsPage(driver);
+//    	System.out.println(p.getProductName());
+//    	System.out.println(p.getProductRating());
+//    	System.out.println(ProductDetailsPage.parseIdFromSourceAttribute("data:image/svg+xml,%3C?xml%20version=%271.0%27%20encoding=%27utf-8%27?%3E%20%3C!--%20Generator:%20Adobe%20Illustrator%2023.1.1,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3E%20%3Csvg%20version=%271.1%27%20id=%27Fill%27%20xmlns=%27http://www.w3.org/2000/svg%27%20xmlns:xlink=%27http://www.w3.org/1999/xlink%27%20x=%270px%27%20y=%270px%27%20viewBox=%270%200%20100%20100%27%20enable-background=%27new%200%200%20100%20100%27%20xml:space=%27preserve%27%3E%20%3Cpath%20fill=%27%23F15C02%27%20d=%27M79.44,0.95H20.56C9.78,0.95,0.95,9.78,0.95,20.56v58.87c0,10.79,8.82,19.61,19.61,19.61h58.87%20c10.79,0,19.61-8.83,19.61-19.61V20.56C99.05,9.78,90.22,0.95,79.44,0.95z%20M65.38,58.24l9.38,29.58L49.69,69.78L24.5,87.82%20l9.34-29.6L8.8,39.6l30.73-0.17c0,0,6.98-19.61,10-28.93c0.54,1.36,9.88,29.1,9.88,29.1H91.2L65.38,58.24z%27/%3E%20%3C/svg%3E\r\n"));
+//    	System.out.println(ProductDetailsPage.parseIdFromSourceAttribute("data:image/svg+xml,%3C?xml%20version=%271.0%27%20encoding=%27utf-8%27?%3E%20%3C!--%20Generator:%20Adobe%20Illustrator%2023.1.1,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3E%20%3Csvg%20version=%271.1%27%20id=%27With-RB%27%20xmlns=%27http://www.w3.org/2000/svg%27%20xmlns:xlink=%27http://www.w3.org/1999/xlink%27%20x=%270px%27%20y=%270px%27%20viewBox=%270%200%20100%20100%27%20enable-background=%27new%200%200%20100%20100%27%20xml:space=%27preserve%27%3E%20%3Cpath%20fill=%27%23FBC8B4%27%20d=%27M79.44,0.95H20.56C9.78,0.95,0.95,9.78,0.95,20.56v58.87c0,10.79,8.82,19.61,19.61,19.61h58.87%20c10.79,0,19.61-8.83,19.61-19.61V20.56C99.05,9.78,90.22,0.95,79.44,0.95z%20M65.38,58.24l9.38,29.58L49.69,69.78L24.5,87.82%20l9.34-29.6L8.8,39.6l30.73-0.17c0,0,6.98-19.61,10-28.93c0.54,1.36,9.88,29.1,9.88,29.1H91.2L65.38,58.24z%27/%3E%20%3C/svg%3E\r\n"
+//    			+ ""));
+    }
+
+    @Then("^Products with specifications are displayed$")
+    public void productDetailsPageIsDisplayed() {
+        // Your implementation here
+    }
+    
 	@Given("User Navigates to SupplyHouse HomePage without being logging in")
 	public void user_navigates_to_SupplyHouse_home_page_without_being_logging_in() {
 		initializeWebDriver("Chrome");

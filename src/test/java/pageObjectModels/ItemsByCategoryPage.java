@@ -12,7 +12,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ItemsByCategoryPage extends BasePageObject{
-	protected WebDriver driver;
 	
 	protected static final String itemLinksXpath = "//a[@class='product-name product-link']";
 	protected static final String itemNameXpath = "//div[@class='desc']/a/strong";
@@ -20,6 +19,7 @@ public class ItemsByCategoryPage extends BasePageObject{
 	protected static final String breadcrumbLinksXpath = "//div[@id='breadcrumbs']/ol/li//a";
 	protected static final String pageTitleXpath = "//div[@class='header-groupings']/h1";
 	protected static final String itemCountXpath = "//*[@id='result-size-nav']";
+	protected static final String productSpecificationsXpath = "//div[@id='refine-groups']//div[contains(@id, 'group')]";
 	
 	public ItemsByCategoryPage(WebDriver driver) {
 		super(driver);
@@ -37,6 +37,10 @@ public class ItemsByCategoryPage extends BasePageObject{
 	
 	public void selectItemOnPage(int i) {
 		itemLinks.get(i).click();
+	}
+	
+	public void reinitializeItemsOnPage() {
+		itemLinks = driver.findElements(By.xpath(itemLinksXpath));
 	}
 	
 	public String getBreadcrumbValue(int i) {
@@ -83,6 +87,61 @@ public class ItemsByCategoryPage extends BasePageObject{
 
 	}
 	
+	public Boolean makeProductSpecification(String specificationType, String specificationMade) {
+		if (specificationType.equals("In Stock Only")) {
+			if (specificationMade.equals("true")) {
+				//WebElement w = driver.findElement(By.xpath("//div[@id='refine-groups']//div[contains(@id, 'group')]//ul"));
+				WebElement w = productSpecifications.get(0).findElement(By.tagName("ul"));
+				w.click();
+				return true;
+			}
+			else {
+				return true;
+			}
+		}
+		if (specificationMade.equals("Review Score")) {
+			return ratingSpecification(specificationType, specificationMade);
+		}
+		for (int i = 1; i < productSpecifications.size(); i++) {
+			WebElement w = productSpecifications.get(i).findElement(By.className("text"));
+            if (w.getText().contains(specificationType)) {
+            	return selectProductSpecificationOption(productSpecifications.get(i), specificationMade);
+            }
+        }
+		return false;
+	}
+	
+	public Boolean ratingSpecification(String specificationType, String specificationMade) {
+		for (int i = 1; i < productSpecifications.size(); i++) {
+			WebElement w = productSpecifications.get(i).findElement(By.className("text"));
+			if (w.getText().equals("Review Score ")) {
+            	return selectProductSpecificationOption(productSpecifications.get(i), specificationMade);
+            }
+		}
+		return false;
+	}
+	
+	public Boolean selectProductSpecificationOption(WebElement w, String specificationMade) {
+		List<WebElement> options = w.findElements(By.tagName("li"));
+		int optionsSize = options.size();
+		WebElement lastElement = options.get(optionsSize - 1);
+		if (lastElement.getAttribute("class").equals("show-more")) {
+			WebElement showMoreButton = lastElement.findElement(By.tagName("a"));
+			showMoreButton.click();
+			for (int i = 0; i < options.size() - 1; i++) {
+				WebElement temp = options.get(i).findElement(By.tagName("label"));
+				System.out.println("Option: " + temp.getText());
+			}
+		} else {
+			for (int i = 0; i < options.size(); i++) {
+				WebElement temp = options.get(i).findElement(By.tagName("label"));
+				System.out.println("Option: " + temp.getText());
+			}
+		}
+		System.out.println("class Name: " + lastElement.getAttribute("class"));
+		return true;
+	}
+	
 	@FindBy(xpath=itemLinksXpath)
 	List<WebElement> itemLinks;
 	
@@ -100,6 +159,10 @@ public class ItemsByCategoryPage extends BasePageObject{
 	
 	@FindBy(xpath=itemCountXpath)
 	WebElement itemCount;
+	
+	@FindBy(xpath=productSpecificationsXpath)
+	List<WebElement> productSpecifications;
+	
 	
 	
 }

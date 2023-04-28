@@ -1,6 +1,7 @@
 package pageObjectModels;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -89,6 +90,34 @@ public class SupplyHouseHomePage extends BasePageObject{
     	return trustedBrands.size();
     }
     
+    public List<String> getNamesOfTrustedBrands() {
+    	List<String> ls = new ArrayList<String>();
+    	for (int i = 0; i < trustedBrands.size(); i++) {
+    		String temp = trustedBrands.get(i).getAttribute("href");
+    		temp = temp.replace(getHomePageUrl(), "");
+    		ls.add(temp);
+    	}
+    	
+    	return ls;
+    }
+    
+    public Boolean clickTrustedBrand(String brandName) {
+    	List<String> trustedBrands = this.getNamesOfTrustedBrands();
+    	for (String item : trustedBrands) {
+            if (item.equals(brandName)) {
+            	String myXpath = generateDynamicTrustedBrandXpath(item);
+            	WebElement linkToClick = driver.findElement(By.xpath(myXpath));
+            	linkToClick.click();
+            	return true;
+            }
+        }
+    	return false;
+    }
+    
+    public String generateDynamicTrustedBrandXpath(String brandName) {
+    	return "//a[@href='/" + brandName + "']";
+    }
+    
 	public SupplyHouseHomePage(WebDriver driver) {
 		super(driver);
 		//driver.findElement(By.xpath("//html")).click();
@@ -157,8 +186,6 @@ public class SupplyHouseHomePage extends BasePageObject{
 	
 	public void hoverOverNavBarPlumbing() {
 		WebElement navBarPlumbing = this.getNavBarPlumbing();
-//		JavascriptExecutor js = (JavascriptExecutor) driver;
-//		js.executeScript("var event = new MouseEvent('mouseenter', { 'view': window, 'bubbles': true, 'cancelable': true }); arguments[0].dispatchEvent(event);", navBarPlumbing);
 		actions.moveToElement(navBarPlumbing).perform();
 	}
 	

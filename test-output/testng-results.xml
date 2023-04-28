@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="6" failed="3" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-22T03:07:26Z" name="Default suite" finished-at="2023-04-22T03:10:32Z" duration-ms="185938">
+  <suite started-at="2023-04-28T06:08:33Z" name="Default suite" finished-at="2023-04-28T06:08:50Z" duration-ms="17312">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@312aa7c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@4f32a3ad]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-04-22T03:07:26Z" name="Default test" finished-at="2023-04-22T03:10:32Z" duration-ms="185938">
+    <test started-at="2023-04-28T06:08:33Z" name="Default test" finished-at="2023-04-28T06:08:50Z" duration-ms="17312">
       <class name="features.TestNGTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:features.TestNGTestRunner@312aa7c]" started-at="2023-04-22T03:07:26Z" name="setUpClass" finished-at="2023-04-22T03:07:27Z" duration-ms="880" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:features.TestNGTestRunner@4f32a3ad]" started-at="2023-04-28T06:08:33Z" name="setUpClass" finished-at="2023-04-28T06:08:34Z" duration-ms="580" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@40a8a26f]]>
+                <![CDATA[org.testng.TestRunner@4207852d]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@312aa7c]" started-at="2023-04-22T03:07:27Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-22T03:07:34Z" duration-ms="7426" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@4f32a3ad]" started-at="2023-04-28T06:08:34Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-28T06:08:50Z" duration-ms="16668" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,197 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@312aa7c]" started-at="2023-04-22T03:07:34Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-22T03:08:01Z" duration-ms="26436" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Selecting category and navigating to item Product Details Page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Selects category from navbar and clicks subcategories until item selection is shown and user selects first item"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@312aa7c]" started-at="2023-04-22T03:08:01Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-22T03:08:20Z" duration-ms="19470" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Selecting category and navigating to item Product Details Page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Selects category from navbar and clicks subcategories until item selection is shown and user selects first item"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@312aa7c]" started-at="2023-04-22T03:08:20Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-22T03:08:38Z" duration-ms="17796" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Selecting category and navigating to item Product Details Page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Selects category from navbar and clicks subcategories until item selection is shown and user selects first item"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@312aa7c]" started-at="2023-04-22T03:08:38Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-22T03:08:59Z" duration-ms="20750" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Selecting category and navigating to item Product Details Page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Selects category from navbar and clicks subcategories until item selection is shown and user selects first item"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-Selected Title assertion failed: Expected 't304 1/4" stainless steel 90° elbow', but found 't304 1/4" stainless steel 90-degree elbow'. 
-Scenario Parameters: 
-subCategory: Stainless Steel
-navbarCategory: Fittings
- expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Selected Title assertion failed: Expected 't304 1/4" stainless steel 90° elbow', but found 't304 1/4" stainless steel 90-degree elbow'. 
-Scenario Parameters: 
-subCategory: Stainless Steel
-navbarCategory: Fittings
- expected [true] but found [false]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:137)
-at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/CategoryNavBar.feature:10)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@312aa7c]" started-at="2023-04-22T03:08:59Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-22T03:09:17Z" duration-ms="18372" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Searching for item and navigating to item Product Details Page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Search for a given product category and clicks subcategories until item selection is shown and user selects first item"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@312aa7c]" started-at="2023-04-22T03:09:17Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-22T03:09:43Z" duration-ms="25749" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Searching for item and navigating to item Product Details Page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Search for a given product category and clicks subcategories until item selection is shown and user selects first item"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-Selected Title assertion failed: Expected '1/4" 009qt rpz (bronze)', but found '1/4" bronze rpz (009qt)'. 
-Scenario Parameters: 
-item: Backflow
- expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Selected Title assertion failed: Expected '1/4" 009qt rpz (bronze)', but found '1/4" bronze rpz (009qt)'. 
-Scenario Parameters: 
-item: Backflow
- expected [true] but found [false]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:137)
-at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:10)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@312aa7c]" started-at="2023-04-22T03:09:43Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-22T03:10:12Z" duration-ms="29037" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Searching for item and navigating to item Product Details Page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Search for a given product category and clicks subcategories until item selection is shown and user selects first item"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:features.TestNGTestRunner@312aa7c]" started-at="2023-04-22T03:10:12Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-22T03:10:32Z" duration-ms="19923" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Searching for item and navigating to item Product Details Page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Search for a given product category and clicks subcategories until item selection is shown and user selects first item"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-Page Title assertion failed: Expected 'drains', but found 'plumbing drainage'. 
-Scenario Parameters: 
-item: Drains
- expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Page Title assertion failed: Expected 'drains', but found 'plumbing drainage'. 
-Scenario Parameters: 
-item: Drains
- expected [true] but found [false]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:137)
-at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:10)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:features.TestNGTestRunner@312aa7c]" started-at="2023-04-22T03:10:32Z" name="tearDownClass" finished-at="2023-04-22T03:10:32Z" duration-ms="56" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:features.TestNGTestRunner@4f32a3ad]" started-at="2023-04-28T06:08:50Z" name="tearDownClass" finished-at="2023-04-28T06:08:50Z" duration-ms="50" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
