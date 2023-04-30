@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>8/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Apr 28 02:08:33 EDT 2023</td>
+<td>Started on:</td><td>Sun Apr 30 17:29:34 EDT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>17 seconds (17312 ms)</td>
+<tr><td>Total time:</td><td>350 seconds (350236 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,36 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for a given product category and clicks subcategories until item selection is shown and user selects first item"</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Selected Title assertion failed: Expected &apos;1/4&quot; 009qt rpz (bronze)&apos;, but found &apos;1/4&quot; bronze rpz (009qt)&apos;. 
+Scenario Parameters: 
+item: Backflow
+ expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:211)
+	at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:10)
+</pre></div><a href='#' onClick='toggleBox("stack-trace157226018", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace157226018'><pre>java.lang.AssertionError: The following asserts failed:
+	Selected Title assertion failed: Expected &apos;1/4&quot; 009qt rpz (bronze)&apos;, but found &apos;1/4&quot; bronze rpz (009qt)&apos;. 
+Scenario Parameters: 
+item: Backflow
+ expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:211)
+	at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:10)
+</pre></div></td>
+<td>68</td>
+<td>features.TestNGTestRunner@4f32a3ad</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -77,7 +107,42 @@ function toggleAllBoxes() {
 <tr>
 <td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Selecting trusted brand and making specifications in item catalog page", "User Selects a trusted brand from homepage, adds specifications at item catalog, user is then shown results that match parameters"</td>
 <td></td>
-<td>16</td>
+<td>33</td>
+<td>features.TestNGTestRunner@4f32a3ad</td></tr>
+<tr>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Selecting trusted brand and making specifications in item catalog page", "User Selects a trusted brand from homepage, adds specifications at item catalog, user is then shown results that match parameters"</td>
+<td></td>
+<td>26</td>
+<td>features.TestNGTestRunner@4f32a3ad</td></tr>
+<tr>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Selecting trusted brand and making specifications in item catalog page", "User Selects a trusted brand from homepage, adds specifications at item catalog, user is then shown results that match parameters"</td>
+<td></td>
+<td>37</td>
+<td>features.TestNGTestRunner@4f32a3ad</td></tr>
+<tr>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Selecting category and navigating to item Product Details Page", "User Selects category from navbar and clicks subcategories until item selection is shown and user selects first item"</td>
+<td></td>
+<td>85</td>
+<td>features.TestNGTestRunner@4f32a3ad</td></tr>
+<tr>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Selecting category and navigating to item Product Details Page", "User Selects category from navbar and clicks subcategories until item selection is shown and user selects first item"</td>
+<td></td>
+<td>18</td>
+<td>features.TestNGTestRunner@4f32a3ad</td></tr>
+<tr>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Selecting category and navigating to item Product Details Page", "User Selects category from navbar and clicks subcategories until item selection is shown and user selects first item"</td>
+<td></td>
+<td>42</td>
+<td>features.TestNGTestRunner@4f32a3ad</td></tr>
+<tr>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for a given product category and clicks subcategories until item selection is shown and user selects first item"</td>
+<td></td>
+<td>18</td>
+<td>features.TestNGTestRunner@4f32a3ad</td></tr>
+<tr>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for a given product category and clicks subcategories until item selection is shown and user selects first item"</td>
+<td></td>
+<td>18</td>
 <td>features.TestNGTestRunner@4f32a3ad</td></tr>
 </table><p>
 </body>

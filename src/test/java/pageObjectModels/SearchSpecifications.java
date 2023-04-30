@@ -34,6 +34,12 @@ public class SearchSpecifications extends BasePageObject {
 	protected Actions actions;
 	protected WebDriverWait wait;
 	
+	protected final static String resetButtonXpath = "//div[@id='refine-clear']//a";
+	
+	protected final static String specsWindowIdpath = "sidebar";
+	
+	protected final static String specificationGroupsXpath = "//div[@id='refine-groups']//div[contains(@id, 'group')]";
+	
 	public SearchSpecifications(WebDriver driver) {
 		super(driver);
 		this.actions = new Actions(driver);
@@ -41,48 +47,16 @@ public class SearchSpecifications extends BasePageObject {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(id="sidebar")
+	@FindBy(id=specsWindowIdpath)
 	WebElement specificationsWindow;
 	
-	@FindBy(xpath="//div[@id='refine-clear']//a")
+	@FindBy(xpath=resetButtonXpath)
 	WebElement resetButton;
 	
-	@FindBy(xpath="//div[@id='refine-groups']//div[contains(@id, 'group')]")
+	@FindBy(xpath=specificationGroupsXpath)
 	List<WebElement> specificationGroups;
-	
-	public static Document decodeAndParseSVG(String svgDataURL) throws UnsupportedEncodingException, SAXException, IOException, ParserConfigurationException {
-        String[] parts = svgDataURL.split(",", 2);
-        String data = URLDecoder.decode(parts[1], StandardCharsets.UTF_8.toString());
-
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = factory.newDocumentBuilder();
-        Document document = builder.parse(new ByteArrayInputStream(data.getBytes(StandardCharsets.UTF_8)));
-
-        return document;
-    }
-
-    public static String identifyStarType(String src) {
-        String starType = "unknown_star_type";
-        try {
-            Document svg = decodeAndParseSVG(src);
-            Element svgElement = svg.getDocumentElement();
-            String svgId = svgElement.getAttribute("id");
-
-            if (svgId.equals("Fill")) {
-                starType = "full_star";
-            } else if (svgId.equals("Half")) {
-                starType = "half_empty_star";
-            } else if (svgId.equals("No-RB")) {
-                starType = "empty_star";
-            }
-        } catch (Exception e) {
-            System.err.println("Error identifying star type: " + e.getMessage());
-        }
-
-        return starType;
-    }
     
-    public static int findFirstIntegerBetweenOneAndFive(String input) {
+    public static int findFirstIntegerBetweenOneAndFive(String input) { //Reviewed
         Pattern pattern = Pattern.compile("[1-5]");
         Matcher matcher = pattern.matcher(input);
 
@@ -93,51 +67,58 @@ public class SearchSpecifications extends BasePageObject {
         }
     }
 	
-	public void toggleInStockOnly() {
+	public void toggleInStockOnly() { //Reviewed
 		specificationGroups.get(0).findElement(By.tagName("ul")).click();
 	}
 	
-	public void resetSpecifications() {
+	public void resetSpecifications() { //Reviewed
 		if (!resetButton.getAttribute("class").contains("hidden")) {
 			resetButton.click();
 		}
 	}
 	
-	public void makeSelections(Map<String, String> map) throws InterruptedException {
+	public Boolean makeSelections(Map<String, String> map) throws InterruptedException { //Reviewed
+		Boolean returnBool = true;
 		this.resetSpecifications();
 		if (map.containsKey("In Stock Only") && map.get("In Stock Only").equals("true")) {
 			toggleInStockOnly();
 		}
-		if (map.containsKey("Review Score") && map.get("Review Score") != "null") {
-			selectUserRating(map.get("Review Score"));
+		if (map.containsKey("Review Score") && !map.get("Review Score").equals("null")) {
+			if (!selectUserRating(map.get("Review Score"))) {
+				returnBool = false;
+			}
 		}
 		for (int i = 1; i < specificationGroups.size(); i++) {
 			String specificationTitle = getSpecificationTitle(specificationGroups.get(i));
-			if (map.containsKey(specificationTitle) && map.get(specificationTitle) != "null") {
-				makeIndividualSelection(specificationGroups.get(i), map.get(specificationTitle));
+			if (specificationTitle.equals("Review Score")) {
+				continue;
+			}
+			if (map.containsKey(specificationTitle) && !map.get(specificationTitle).equals("null")) {
+				if (!makeIndividualSelection(specificationGroups.get(i), map.get(specificationTitle))) {
+					returnBool = false;
+				}
 				Thread.sleep(1000);
 			}
 		}
+		return returnBool;
 	}
 	
-	private void selectUserRating(String desiredUserRating) {
+	private Boolean selectUserRating(String desiredUserRating) { //Reviewed
 		int desiredNumberOfStars = findFirstIntegerBetweenOneAndFive(desiredUserRating);
 		WebElement userRatingOption = getUserRatingOption();
 		List<WebElement> listElements = userRatingOption.findElements(By.tagName("li"));
 		for (int i = 0; i < listElements.size(); i++) {
-			//System.out.println(listElements.get(i).getAttribute("outerHTML"));
-			//WebElement w = listElements.get(i).findElement(By.tagName("div"));
 			List<WebElement> temp = listElements.get(i).findElements(By.tagName("div"));
 			if (temp.size() != 0) {
 				int filledStars = countNumberOfStarsInRatingSelector(temp.get(0));
 				if (filledStars == desiredNumberOfStars) {
 					listElements.get(i).click();
-					return;
+					return true;
 				}
 				
 			}
 		}
-		System.out.println("# of listElements: " + listElements.size());
+		return false;
 	}
 
 	private int countNumberOfStarsInRatingSelector(WebElement w) {
@@ -176,15 +157,11 @@ public class SearchSpecifications extends BasePageObject {
 		return false;
 	}
 	
-	public void makeIndividualSelection(WebElement specGroup, String selectionToMake) {
+	public Boolean makeIndividualSelection(WebElement specGroup, String selectionToMake) {
+		Boolean selectionMade = false;
 		List<WebElement> options = specGroup.findElements(By.tagName("li"));
 		WebElement finalElement = options.get(options.size() - 1);
 		if (isShowMoreElement(finalElement)) {
-//			try {
-//	            nonClickableElement.click();
-//	        } catch (ElementNotInteractableException e) {
-//	            isClickable = false;
-//	        }
 			try {
 				finalElement.findElement(By.tagName("a")).click();
 			} catch (ElementNotInteractableException e) {
@@ -195,6 +172,7 @@ public class SearchSpecifications extends BasePageObject {
 				String labelText = temp.getText();
 				if (labelText.contains(selectionToMake) && !isOptionDisabled(options.get(i))) {
 					temp.click();
+					selectionMade = true;
 					break;
 				}
 			}
@@ -205,13 +183,15 @@ public class SearchSpecifications extends BasePageObject {
 				String labelText = temp.getText();
 				if (labelText.contains(selectionToMake) && !isOptionDisabled(options.get(i))) {
 					temp.click();
+					selectionMade = true;
 					break;
 				}
 			}
 		}
+		return selectionMade;
 	}
 
-	private boolean isShowMoreElement(WebElement finalElement) {
+	private Boolean isShowMoreElement(WebElement finalElement) {
 		if (finalElement.getAttribute("class").equals("show-more")) {
 			return true;
 		}

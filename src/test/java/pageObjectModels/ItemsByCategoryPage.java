@@ -1,6 +1,7 @@
 package pageObjectModels;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -20,6 +21,7 @@ public class ItemsByCategoryPage extends BasePageObject{
 	protected static final String pageTitleXpath = "//div[@class='header-groupings']/h1";
 	protected static final String itemCountXpath = "//*[@id='result-size-nav']";
 	protected static final String productSpecificationsXpath = "//div[@id='refine-groups']//div[contains(@id, 'group')]";
+	protected static final String itemListingsXpath = "//*[@id='browse-results']//li";
 	
 	public ItemsByCategoryPage(WebDriver driver) {
 		super(driver);
@@ -29,6 +31,18 @@ public class ItemsByCategoryPage extends BasePageObject{
 		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(breadcrumbsXpath)));
 		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(itemNameXpath)));
 		PageFactory.initElements(driver, this);
+	}
+	
+	public List<ProductSearchResultListing> initializeItemListings() {
+		List<WebElement> itemListings = driver.findElements(By.xpath(itemListingsXpath));
+		List<ProductSearchResultListing> li = new ArrayList<ProductSearchResultListing>();
+		for (WebElement w : itemListings) {
+			if(w.isDisplayed()) {
+				ProductSearchResultListing temp = new ProductSearchResultListing(w);
+				li.add(temp);
+			}
+		}
+		return li;
 	}
 	
 	public int getNumberOfItems() {

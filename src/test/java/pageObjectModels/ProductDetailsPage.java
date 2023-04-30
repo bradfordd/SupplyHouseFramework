@@ -63,6 +63,10 @@ public class ProductDetailsPage extends BasePageObject {
 		return productTitle.getText();
 	}
 	
+	public Boolean isProductName(String expectedProductName) {
+		return productTitle.getText().contains(expectedProductName);
+	}
+	
 	public String getProductPrice() {
 		return productPrice.getText();
 	}

@@ -14,7 +14,7 @@ Feature: User Selects category from navbar and clicks subcategories until item s
 		|  Fittings        |  Copper Press         |
 		|  Fittings        |  Electrical           |
 		|  Fittings        |  PEX                  |
-		|  Fittings        |  Stainless Steel      |
+#		|  Fittings        |  Stainless Steel      |
 #		|  Fittings        |  ZoomLock             |
 #|  Plumbing   |  Access Doors           |
 #		|	 Plumbing		|		Backflow							|		

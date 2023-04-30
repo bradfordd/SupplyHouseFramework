@@ -1,5 +1,8 @@
 package utils;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,4 +18,15 @@ public class GenericUtils {
         bodyElement.click();
 		Thread.sleep(5000);
 	}
+	
+	public static int findFirstIntegerBetweenOneAndFive(String input) { //Reviewed
+        Pattern pattern = Pattern.compile("[1-5]");
+        Matcher matcher = pattern.matcher(input);
+
+        if (matcher.find()) {
+            return Integer.parseInt(matcher.group());
+        } else {
+            return -1; // Return -1 if no integer between 1 and 5 is found
+        }
+    }
 }
