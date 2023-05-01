@@ -40,11 +40,12 @@ public class SearchSpecifications extends BasePageObject {
 	
 	protected final static String specificationGroupsXpath = "//div[@id='refine-groups']//div[contains(@id, 'group')]";
 	
-	public SearchSpecifications(WebDriver driver) {
+	public SearchSpecifications(WebDriver driver) throws InterruptedException {
 		super(driver);
 		this.actions = new Actions(driver);
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		PageFactory.initElements(driver, this);
+		Thread.sleep(2000);
 	}
 	
 	@FindBy(id=specsWindowIdpath)
@@ -97,9 +98,10 @@ public class SearchSpecifications extends BasePageObject {
 				if (!makeIndividualSelection(specificationGroups.get(i), map.get(specificationTitle))) {
 					returnBool = false;
 				}
-				Thread.sleep(1000);
+				Thread.sleep(2000);
 			}
 		}
+		Thread.sleep(2000);
 		return returnBool;
 	}
 	
@@ -165,7 +167,8 @@ public class SearchSpecifications extends BasePageObject {
 			try {
 				finalElement.findElement(By.tagName("a")).click();
 			} catch (ElementNotInteractableException e) {
-				System.out.println("ShowMoreElement Not clicked");
+				System.out.println("Show More Element Not clicked");
+				return false;
 			}
 			for (int i = 0; i < options.size() - 1; i++) {
 				WebElement temp = options.get(i).findElement(By.tagName("label"));

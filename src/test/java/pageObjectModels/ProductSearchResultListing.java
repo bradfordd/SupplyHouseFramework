@@ -13,6 +13,7 @@ public class ProductSearchResultListing {
 	protected static final String productTitleClassPath = "product-name";
 	protected static final String itemRatingClassPath = "desc-rating";
 	protected static final String itemStatusClassPath = "status";
+	protected static final String itemPriceClassPath = "unit-price-text";
 
     public ProductSearchResultListing(WebElement listingElement) {
         this.listingElement = listingElement;
@@ -20,6 +21,10 @@ public class ProductSearchResultListing {
     
     public String getProductTitle() {
     	return listingElement.findElement(By.className(productTitleClassPath)).getText();
+    }
+    
+    public String getProductPrice() {
+    	return listingElement.findElement(By.className(itemPriceClassPath)).getText();
     }
     
     public Double getItemRating() {
@@ -45,7 +50,7 @@ public class ProductSearchResultListing {
     	return numberOfStars;
     }
     
-    public static Boolean doesProductListingsMatchSpecs(List<ProductSearchResultListing> li, String inStock, String expectedRating) {
+    public static Boolean doesProductListingsMatchSpecs(List<ProductSearchResultListing> li, String inStock, String expectedRating, String expectedPriceRange) {
 	    if (!expectedRating.equals("null")) {
 	    	double expectedRatingLowerBound = GenericUtils.findFirstIntegerBetweenOneAndFive(expectedRating);
 	    	double expectedRatingUpperBound = expectedRatingLowerBound;
@@ -66,6 +71,14 @@ public class ProductSearchResultListing {
 	    			return false;
 	    		}
 	    	}
+	    }
+	    if (!expectedPriceRange.equals("null")) {
+	    	for (ProductSearchResultListing temp : li) {
+	    		double productPrice = GenericUtils.parseCurrency(temp.getProductPrice());
+			    if (!GenericUtils.isPriceWithinRange(productPrice, expectedPriceRange)) {
+			    	return false;
+			    }
+		    }
 	    }
     	return true;
     }

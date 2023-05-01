@@ -19,6 +19,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
+import utils.GenericUtils;
+
 public class SupplyHouseHomePage extends BasePageObject{
 	protected Actions actions;
 	protected WebDriverWait wait;
@@ -29,9 +31,6 @@ public class SupplyHouseHomePage extends BasePageObject{
 	Map<String, String> scenarioParams = new HashMap<String, String>();
 	SoftAssert softAssert = new SoftAssert();
 	
-	//protected static final String navBarXpath = "//ul[contains(@class, 'HeaderNavBarUl')]";
-	
-	//protected static final String navBarSubCategoryXpathTemplate = "//a[contains(text(), 'subcategoryName')]";
 	
 	protected static final String navBarPlumbingXpath = "//ul[contains(@class, 'HeaderNavBarUl')]/li[3]";
 	
@@ -129,7 +128,8 @@ public class SupplyHouseHomePage extends BasePageObject{
 	}
 	
 	
-	public Boolean hoverOverNavBarElementAndSelectCategory(String navBarCategory, String subCategory) {
+	public Boolean hoverOverNavBarElementAndSelectCategory(String navBarCategory, String subCategory) throws InterruptedException {
+		GenericUtils.clickOnPageBody(driver);
 		navBarCategory = navBarCategory.toLowerCase();
 		String dynamicXpath = "";
 		switch (navBarCategory) {
@@ -294,9 +294,9 @@ public class SupplyHouseHomePage extends BasePageObject{
 	public Boolean searchForItem(String item) throws InterruptedException {
 		String currUrl = "";
 		topSearchBar.click();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		topSearchBar.sendKeys(item + Keys.ENTER);
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		currUrl = driver.getCurrentUrl();
 		if (!currUrl.equals(getHomePageUrl()) && !currUrl.equals(getAlternateHomePageUrl())) {
 			return true;
@@ -307,7 +307,7 @@ public class SupplyHouseHomePage extends BasePageObject{
 			topSearchBar.click();
 			Thread.sleep(2000);
 			topSearchBar.sendKeys(item + Keys.ENTER);
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			currUrl = driver.getCurrentUrl();
 			if (currUrl != getHomePageUrl() && currUrl != getAlternateHomePageUrl()) {
 				return true;

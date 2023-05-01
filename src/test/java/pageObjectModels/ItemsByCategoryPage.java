@@ -23,7 +23,7 @@ public class ItemsByCategoryPage extends BasePageObject{
 	protected static final String productSpecificationsXpath = "//div[@id='refine-groups']//div[contains(@id, 'group')]";
 	protected static final String itemListingsXpath = "//*[@id='browse-results']//li";
 	
-	public ItemsByCategoryPage(WebDriver driver) {
+	public ItemsByCategoryPage(WebDriver driver) throws InterruptedException {
 		super(driver);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(pageTitleXpath)));
@@ -31,6 +31,7 @@ public class ItemsByCategoryPage extends BasePageObject{
 		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(breadcrumbsXpath)));
 		wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(itemNameXpath)));
 		PageFactory.initElements(driver, this);
+		Thread.sleep(2000);
 	}
 	
 	public List<ProductSearchResultListing> initializeItemListings() {

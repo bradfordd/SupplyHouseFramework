@@ -51,9 +51,8 @@ public class ItemSearchSteps extends RunWeb{
 	
 	Map<String, String> scenarioParams = new HashMap<String, String>();
 	SoftAssert softAssert = new SoftAssert();
-	@Given("User Selects (.*?) then selects (.*?)$")
-	public void user_selects_faucet_parts_then_selects_test(String navbarCategory, String subCategory) throws InterruptedException {
-		GenericUtils.clickOnPageBody(driver);
+	@Given("User Selects (.*?) then selects (.*?) from dropdown menu$")
+	public void user_selects_faucet_parts_then_selects_test(String navbarCategory, String subCategory) throws InterruptedException { //Approved
 		s = new SupplyHouseHomePage(driver);
 		scenarioParams.put("navbarCategory", navbarCategory);
 		scenarioParams.put("subCategory", subCategory);
@@ -97,15 +96,8 @@ public class ItemSearchSteps extends RunWeb{
     	map.put("Material", material);
     	map.put("Size", size);
     	i = new ItemsByCategoryPage(driver);
-    	Thread.sleep(2000);
     	SearchSpecifications s = new SearchSpecifications(driver);
-    	Thread.sleep(2000);
-    	//System.out.println("List SIze: " + li.size());
-    	//System.out.println(li.get(0).getInventoryStatus());
     	Assert.assertTrue(s.makeSelections(map), generateSearchSpecificationsFailureMessage(inStockOnly, productType, priceRange, reviewScore, application, material, size));
-    	Thread.sleep(5000);
-    	
-    	
     }
     
     public static String generateSearchSpecificationsFailureMessage(String inStockOnly, String productType, String priceRange, String reviewScore, String application, String material, String size) {
@@ -124,10 +116,15 @@ public class ItemSearchSteps extends RunWeb{
     @Then("^Products with specifications are displayed$")
     public void productDetailsPageIsDisplayed() {
     	List<ProductSearchResultListing> li = i.initializeItemListings();
-    	Assert.assertTrue(ProductSearchResultListing.doesProductListingsMatchSpecs(li, inStockOnly, reviewScore));
+    	Assert.assertTrue(ProductSearchResultListing.doesProductListingsMatchSpecs(li, inStockOnly, reviewScore, priceRange),
+    			String.format(
+    			"Specifications not reflected in search results: \n %s",
+    					getFormattedScenarioParams()
+    			)
+    			);
     }
     
-	@Given("User Navigates to SupplyHouse HomePage without being logging in")
+	@Given("User Navigates to SupplyHouse HomePage without being logging in")  //Approved
 	public void user_navigates_to_SupplyHouse_home_page_without_being_logging_in() {
 		initializeWebDriver("Chrome");
 		SupplyHouseHomePage.navigateToSupplyHouseHomePage(driver);
@@ -161,9 +158,11 @@ public class ItemSearchSteps extends RunWeb{
 						)
 				);
 	}
-	@Given("User is navigated to item category select Page, selects first category on page and subsequent category pages, selects first item displayed")
-	public void user_is_navigated_to_item_search_results_page_selects_first_item_on_search_page() throws InterruptedException {
-	    while (true) {
+	
+	@Given("User is navigated to item category select Page, selects first category on page and subsequent category pages, selects first item displayed on search results page")
+	public void user_is_navigated_to_item_category_select_page_selects_first_category_on_page_and_subsequent_category_pages_selects_first_item_displayed_on_search_results_page() throws InterruptedException {
+		int j = 0;
+		while (j < 5) {
 			String categoryName = c.getCategoryName(0);
 			c.selectCategory(0);
 		    if (ItemsByCategoryPage.isItemPage(driver)) {
@@ -190,12 +189,27 @@ public class ItemSearchSteps extends RunWeb{
 							getFormattedScenarioParams()
 							)
 					);
+			j++;
 	    }
+		if (j == 5) {
+			Assert.assertTrue(
+					false,
+					String.format(
+							"Navigation to item Search results failed: \n%s",
+							getFormattedScenarioParams()
+							)
+					);
+		}
     	i = new ItemsByCategoryPage(driver);
 	    selectedItemName = i.getItemOnPageName(0);
 	    i.selectItemOnPage(0);
 	}
-	@Then("Product details Page Corresponding with selected entry is displayed")
+
+	@Given("User is navigated to item category select Page, selects first category on page and subsequent category pages, selects first item displayed")
+	public void user_is_navigated_to_item_category_select_page_selects_first_category_on_page_and_subsequent_category_pages_selects_first_item_displayed() throws InterruptedException {
+		
+	}
+	@Then("Product details Page Corresponding with selected entry is displayed") //Approved
 	public void product_details_page_corresponding_with_selected_entry_is_displayed() {
 		p = new ProductDetailsPage(driver);
 		String productName = p.getProductName();
@@ -240,7 +254,4 @@ public class ItemSearchSteps extends RunWeb{
         }
 		return sb.toString();
 	}
-	
-	
-	
 }
