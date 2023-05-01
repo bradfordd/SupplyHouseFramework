@@ -33,7 +33,7 @@ git bash:
 
 git bash:
 
-	''' cd SupplyHouseFramework '''
+	 cd SupplyHouseFramework 
 Import the project into your Java IDE as a Maven project:
 Open your preferred Java IDE (such as IntelliJ IDEA or Eclipse) and follow the steps below to import the project as a Maven project.
 
