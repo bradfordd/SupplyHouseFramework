@@ -1,3 +1,22 @@
+
+Here's an example of a README.md file for a Selenium Java with Cucumber regression suite:
+
+markdown
+Copy code
+# Selenium Java with Cucumber Regression Suite
+
+This project contains a Selenium Java regression suite using the Cucumber framework for testing a web application. The test suite covers various functional and UI aspects of the application.
+
+## Prerequisites
+
+- Java 8 or higher
+- Maven
+- Chrome or Firefox web browser
+
+## Setup
+
+1. Clone the repository:
+
 Requirements:
 jdk 11
 Cucumber-java 7.5.0
