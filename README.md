@@ -13,7 +13,7 @@ This project contains a Selenium Java regression suite using the Cucumber framew
 - SupplyHouseFramework
 
 ## Table of Contents
-- [Getting Started](#Getting Started)
+- [Getting Started](#getting-started)
 
 
 
