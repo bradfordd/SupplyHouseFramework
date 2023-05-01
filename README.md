@@ -28,7 +28,7 @@ Use the following command to clone the remote Git repository located at https://
 
 git bash:
 
-     git clone https://github.com/bradfordd/SupplyHouseFramework.git 
+    git clone https://github.com/bradfordd/SupplyHouseFramework.git 	
     Navigate to the project directory:
     Change your current directory to the newly cloned SupplyHouseFramework directory with this command:
 
