@@ -24,18 +24,15 @@ Follow these steps to set up the SupplyHouseFramework project on your local mach
 Clone the repository:
 Use the following command to clone the remote Git repository located at https://github.com/bradfordd/SupplyHouseFramework.git to your local machine. This creates a new directory called SupplyHouseFramework containing the project files.
 
-``` git clone https://github.com/bradfordd/SupplyHouseFramework.git ```
 
 
 git bash:
-    Copy code
-    git clone https://github.com/bradfordd/SupplyHouseFramework.git
+    ``` git clone https://github.com/bradfordd/SupplyHouseFramework.git ```
     Navigate to the project directory:
     Change your current directory to the newly cloned SupplyHouseFramework directory with this command:
 
-bash
-Copy code
-cd SupplyHouseFramework
+git bash:
+	''' cd SupplyHouseFramework '''
 Import the project into your Java IDE as a Maven project:
 Open your preferred Java IDE (such as IntelliJ IDEA or Eclipse) and follow the steps below to import the project as a Maven project.
 
