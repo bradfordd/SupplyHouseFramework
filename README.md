@@ -2,7 +2,7 @@
 
 This project contains a Selenium Java regression suite using the Cucumber framework for SupplyHouse.com. The test suite covers various functional and UI aspects of the application.
 
-##Requirements:
+## Requirements:
 - jdk 11
 - Cucumber-java 7.5.0
 - junit 4.11
@@ -12,7 +12,7 @@ This project contains a Selenium Java regression suite using the Cucumber framew
 - Apache Maven 3.8.6
 - SupplyHouseFramework
 
-##Table of Contents
+## Table of Contents
 - [Getting Started](#Getting Started)
 Running Tests
 Getting Started
