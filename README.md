@@ -19,6 +19,55 @@ This project contains a Selenium Java regression suite using the Cucumber framew
 
 ## Getting Started
 
+Follow these steps to set up the SupplyHouseFramework project on your local machine and import it into your Java IDE:
+
+Clone the repository:
+Use the following command to clone the remote Git repository located at https://github.com/bradfordd/SupplyHouseFramework.git to your local machine. This creates a new directory called SupplyHouseFramework containing the project files.
+
+git bash:
+    Copy code
+    git clone https://github.com/bradfordd/SupplyHouseFramework.git
+    Navigate to the project directory:
+    Change your current directory to the newly cloned SupplyHouseFramework directory with this command:
+
+bash
+Copy code
+cd SupplyHouseFramework
+Import the project into your Java IDE as a Maven project:
+Open your preferred Java IDE (such as IntelliJ IDEA or Eclipse) and follow the steps below to import the project as a Maven project.
+
+For IntelliJ IDEA:
+
+Open IntelliJ IDEA.
+Select "Open" or "Import Project" from the welcome screen or File menu.
+Navigate to the SupplyHouseFramework directory and select the pom.xml file.
+Click "OK" to import the project as a Maven project.
+For Eclipse:
+
+Open Eclipse.
+Go to File > Import.
+Select "Existing Maven Projects" under the "Maven" folder.
+Click "Next."
+Click "Browse" and navigate to the SupplyHouseFramework directory.
+Select the pom.xml file.
+Click "Finish" to import the project as a Maven project.
+After completing these steps, the SupplyHouseFramework project will be set up in your Java IDE, and you can start working with it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
