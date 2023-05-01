@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------
+Test set: features.BrandSelectTestRunner
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 238.791 s <<< FAILURE! - in features.BrandSelectTestRunner
+features.BrandSelectTestRunner.runScenario["Selecting trusted brand and making specifications in item catalog page", "User Selects a trusted brand from homepage, adds specifications at item catalog, user is then shown results that match parameters"](1)  Time elapsed: 23.607 s  <<< FAILURE!
+java.lang.AssertionError: 
+Specifications not reflected in search results: 
+ Scenario Parameters: 
+reviewScore: null
+application: null
+material: null
+size: null
+inStockOnly: true
+priceRange: $2000 to $2500
+productType: Pump
+ expected [true] but found [false]
+
+features.BrandSelectTestRunner.runScenario["Selecting trusted brand and making specifications in item catalog page", "User Selects a trusted brand from homepage, adds specifications at item catalog, user is then shown results that match parameters"](7)  Time elapsed: 82.886 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //div[@class='header-groupings']/h1 (tried for 30 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='header-groupings']/h1"}
+  (Session info: chrome=112.0.5615.138)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [db99f382df8f76e361e0efd7d7565567, findElement {using=xpath, value=//div[@class='header-groupings']/h1}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\lordr\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64833}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64833/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: db99f382df8f76e361e0efd7d7565567
+

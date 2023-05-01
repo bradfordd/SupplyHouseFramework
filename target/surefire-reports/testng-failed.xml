@@ -3,13 +3,13 @@
 <suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="1" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="features.TestNGTestRunner">
+      <class name="features.BrandSelectTestRunner">
         <methods>
-          <include name="runScenario" invocation-numbers="3 18"/>
+          <include name="runScenario" invocation-numbers="0 6"/>
           <include name="tearDownClass"/>
           <include name="setUpClass"/>
         </methods>
-      </class> <!-- features.TestNGTestRunner -->
+      </class> <!-- features.BrandSelectTestRunner -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->
