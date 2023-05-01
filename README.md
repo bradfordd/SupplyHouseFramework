@@ -30,8 +30,8 @@ git bash:
 
     git clone https://github.com/bradfordd/SupplyHouseFramework.git		
     
-    Navigate to the project directory:
-    Change your current directory to the newly cloned SupplyHouseFramework directory with this command:
+Navigate to the project directory:
+Change your current directory to the newly cloned SupplyHouseFramework directory with this command:
 
 git bash:
 
