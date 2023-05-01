@@ -14,9 +14,7 @@ This project contains a Selenium Java regression suite using the Cucumber framew
 
 ## Table of Contents
 - [Getting Started](#Getting Started)
-Running Tests
-Getting Started
-To set up the project locally, follow these steps:
+
 
 
 ## Getting Started
