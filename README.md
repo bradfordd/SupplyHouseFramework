@@ -19,7 +19,7 @@ Getting Started
 To set up the project locally, follow these steps:
 
 
-##Getting Started
+## Getting Started
 
 
 
