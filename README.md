@@ -24,7 +24,7 @@ Follow these steps to set up the SupplyHouseFramework project on your local mach
 Clone the repository:
 Use the following command to clone the remote Git repository located at https://github.com/bradfordd/SupplyHouseFramework.git to your local machine. This creates a new directory called SupplyHouseFramework containing the project files.
 
-git clone https://github.com/bradfordd/SupplyHouseFramework.git
+``` git clone https://github.com/bradfordd/SupplyHouseFramework.git
 
 
 git bash:
