@@ -95,9 +95,9 @@ This background step sets the initial state for all scenarios in the feature fil
 
 
 	 Scenario Outline: Selecting category and navigating to item Product Details Page
-  Given User Selects <NavbarCategory> then selects <subCategory> from dropdown menu
-  And User is navigated to item category select Page, selects first category on page and subsequent category pages, selects first item displayed on search results page
-  Then Product details Page Corresponding with selected entry is displayed
+	 Given User Selects <NavbarCategory> then selects <subCategory> from dropdown menu
+	 And User is navigated to item category select Page, selects first category on page and subsequent category pages, selects first item displayed on search results page
+	 Then Product details Page Corresponding with selected entry is displayed
 
 Examples:
   |  NavbarCategory  |  subCategory                   |
