@@ -257,3 +257,175 @@ These @FindBy annotations define WebElement instances corresponding to the item 
 
 ## Usage:
 This CategorySearchPage class should be used in a Selenium Java test suite using the Page Object Model pattern. It allows for interacting with the Category Search Page and makes it easier to write maintainable and readable test code.
+
+
+
+
+
+# ItemsByCategoryPage.java Documentation
+
+`ItemsByCategoryPage` is a Page Object Model class that represents the Items by Category Page of the SupplyHouse web application. It provides methods to interact with the page's elements, such as selecting an item, getting the number of items, and interacting with product specifications and breadcrumbs.
+
+## Class Definition
+
+```java
+public class ItemsByCategoryPage extends BasePageObject {
+```
+
+`ItemsByCategoryPage` extends the `BasePageObject` class.
+
+## Fields
+
+```java
+protected static final String itemLinksXpath = "//a[@class='product-name product-link']";
+protected static final String itemNameXpath = "//div[@class='desc']/a/strong";
+protected static final String breadcrumbsXpath = "//div[@id='breadcrumbs']/ol/li";
+protected static final String breadcrumbLinksXpath = "//div[@id='breadcrumbs']/ol/li//a";
+protected static final String pageTitleXpath = "//div[@class='header-groupings']/h1";
+protected static final String itemCountXpath = "//*[@id='result-size-nav']";
+protected static final String productSpecificationsXpath = "//div[@id='refine-groups']//div[contains(@id, 'group')]";
+protected static final String itemListingsXpath = "//*[@id='browse-results']//li";
+```
+
+The class has fields for XPath selectors for item links, item names, breadcrumbs, page title, item count, product specifications, and item listings.
+
+## Constructor
+
+```java
+public ItemsByCategoryPage(WebDriver driver) throws InterruptedException {
+	super(driver);
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(pageTitleXpath)));
+	driver.findElement(By.xpath(pageTitleXpath)).click();
+	wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(breadcrumbsXpath)));
+	wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(itemNameXpath)));
+	PageFactory.initElements(driver, this);
+	Thread.sleep(2000);
+}
+```
+
+The constructor initializes the `ItemsByCategoryPage` instance by calling the superclass constructor and waiting for the required elements to be present on the page. Then, it initializes the instance's fields using the `PageFactory` class.
+
+## Methods
+
+```java
+initializeItemListings(): Returns a list of ProductSearchResultListing objects for items on the page.
+getNumberOfItems(): Returns the number of items on the page.
+selectItemOnPage(int i): Selects an item by its index.
+reinitializeItemsOnPage(): Reinitializes the list of item links on the page.
+getBreadcrumbValue(int i): Returns the text of a breadcrumb by its index.
+getFinalBreadcrumbValue(): Returns the text of the final breadcrumb.
+getItemOnPageName(int i): Returns the name of an item by its index.
+getExpectedUrlText(String item): Returns a formatted version of the input item that is expected to be used as part of a URL.
+isItemPage(WebDriver driver): Returns true if the current page is an item page, false otherwise.
+makeProductSpecification(String specificationType, String specificationMade): Applies a product specification filter based on the provided specification type and value.
+ratingSpecification(String specificationType, String specificationMade): Applies a rating specification filter based on the provided specification type and value.
+selectProductSpecificationOption(WebElement w, String specificationMade): Selects a product specification option based on the provided WebElement and value.
+```
+
+## Page Factory Elements
+
+```java
+@FindBy(xpath=itemLinksXpath)
+List<WebElement> itemLinks;
+
+@FindBy(xpath=itemNameXpath)
+List<WebElement> itemNames;
+
+@FindBy(xpath=breadcrumbsXpath)
+List<WebElement> breadcrumbs;
+
+@FindBy(xpath=breadcrumbLinksXpath)
+List<WebElement> breadcrumbLinks;
+
+@FindBy(xpath=pageTitleXpath)
+WebElement PageTitle;
+
+@FindBy(xpath=itemCountXpath)
+WebElement itemCount;
+
+@FindBy(xpath=productSpecificationsXpath)
+List<WebElement> productSpecifications;
+```
+
+These `@FindBy` annotations define WebElement instances corresponding to the item links, item names, breadcrumbs, breadcrumb links, page title, item count, and product specifications.
+
+## Usage
+
+This `ItemsByCategoryPage` class should be used in a Selenium Java test suite using the Page Object Model pattern. It allows for interacting with the Items by Category Page and makes it easier to write maintainable and readable test code.
+
+# ProductDetailsPage.java Documentation
+
+`ProductDetailsPage` is a Page Object Model class that represents the Product Details Page of the SupplyHouse web application. It provides methods to interact with the page's elements, such as getting the product name, price, size, material, and rating.
+
+## Class Definition
+
+```java
+public class ProductDetailsPage extends BasePageObject {
+```
+
+`ProductDetailsPage` extends the `BasePageObject` class.
+
+## Fields
+
+```java
+protected final static String productTitleXpath = "//h1[@font-size='h5,,h4,,h2']";
+protected final static String ratingsBarClassPath = "ProductPageHeaderProductRating__ProductPageHeaderProductRatingLink-sc-7ouyyv-0";
+protected final static String itemPriceXpath = "//*[contains(@class, 'ProductPageContainerQuantityAdjustors')]//*[contains(@class, 'ProductPriceText__ProductPriceTextAmount')]";
+protected final static String inStockStatusXpath = "//*[contains(@class, 'ProductPageContainerQuantityAdjustors')]//*[contains(@class, 'ProductInventoryStatusAndPromiseMessageText')]";
+protected final static String productSpecsXpath = "//*[contains(@class, 'ProductPageSpecification__ProductPageSpecificationTableRow')]";
+```
+
+The class has fields for XPath and class selectors for product title, ratings bar, item price, in-stock status, and product specifications.
+
+## Constructor
+
+```java
+public ProductDetailsPage(WebDriver driver) {
+	super(driver);
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(productTitleXpath)));
+	driver.findElement(By.xpath(productTitleXpath)).click();
+	PageFactory.initElements(driver, this);
+}
+```
+
+The constructor initializes the `ProductDetailsPage` instance by calling the superclass constructor and waiting for the required elements to be present on the page. Then, it initializes the instance's fields using the `PageFactory` class.
+
+## Methods
+
+```java
+parseIdFromSourceAttribute(String src): Returns the 'id' attribute value from an input string.
+getProductName(): Returns the product name.
+isProductName(String expectedProductName): Returns true if the product name matches the expected product name.
+getProductPrice(): Returns the product price.
+isSizeOfProduct(String input): Returns true if the input size matches any available sizes.
+getSize(): Returns an ArrayList of available sizes.
+isMaterialOfProduct(String input): Returns true if the input material matches any available materials.
+getMaterial(): Returns an ArrayList of available materials.
+isMemberOfApplications(String input): Returns true if the input application matches any available applications.
+getApplications(): Returns an ArrayList of available applications.
+getProductRating(): Returns the product rating.
+```
+
+## Page Factory Elements
+
+```java
+@FindBy(className=ratingsBarClassPath)
+WebElement ratingsBar;
+
+@FindBy(xpath=productTitleXpath)
+WebElement productTitle;
+
+@FindBy(xpath=itemPriceXpath)
+WebElement productPrice;
+
+@FindBy(xpath=productSpecsXpath)
+List<WebElement> productSpecs;
+```
+
+These `@FindBy` annotations define WebElement instances corresponding to the ratings bar, product title, product price, and product specifications.
+
+## Usage
+
+This `ProductDetailsPage` class should be used in a Selenium Java test suite using the Page Object Model pattern. It allows for interacting with the Product Details Page and makes it easier to write maintainable and readable test code.
