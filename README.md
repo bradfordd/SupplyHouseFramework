@@ -221,6 +221,8 @@ The class has fields for the WebDriver, XPath selectors for item categories, pag
 	wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(breadcrumbsXpath)));
 	PageFactory.initElements(driver, this);
 }
+```
+
 The constructor initializes the CategorySearchPage instance by calling the superclass constructor and waiting for the required elements to be present on the page. Then, it initializes the instance's fields using the PageFactory class.
 
 ## Methods
@@ -234,17 +236,19 @@ getPageTitle(): Returns the page title text.
 getBreadCrumbText(): Returns an ArrayList of breadcrumb texts.
 getFinalBreadCrumbText(): Returns the text of the final breadcrumb.
 getExpectedUrlText(String item): Returns a formatted version of the input item that is expected to be used as part of a URL.
+```
 
-##Page Factory Elements
+## Page Factory Elements
 
 ```@FindBy(xpath=itemCategoriesXpath)
 List<WebElement> itemCategories;
 
-```@FindBy(xpath=pageTitleXpath)
+@FindBy(xpath=pageTitleXpath)
 WebElement pageTitle;
 
-```@FindBy(xpath=breadcrumbsXpath)
+@FindBy(xpath=breadcrumbsXpath)
 List<WebElement> breadcrumbs;
+```
 
 These @FindBy annotations define WebElement instances corresponding to the item categories, page title, and breadcrumbs.
 
