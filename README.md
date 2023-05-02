@@ -215,7 +215,8 @@ The class has fields for the WebDriver, XPath selectors for item categories, pag
 
 ## Constructor
 
-```public CategorySearchPage(WebDriver driver) throws InterruptedException {
+```
+public CategorySearchPage(WebDriver driver) throws InterruptedException {
 	super(driver);
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 	wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(pageTitleXpath)));
