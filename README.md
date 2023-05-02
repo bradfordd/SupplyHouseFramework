@@ -119,3 +119,56 @@ The `@WebTest` tag is used to categorize this test scenario as a web test. This 
 ## Usage
 
 This feature file is part of a Selenium Java regression suite using the Cucumber framework. It should be executed with the appropriate test runner and environment setup.
+
+
+markdown
+Copy code
+# SearchProduct.feature Documentation
+
+Feature: Search for a given product category and clicks subcategories until item selection is shown and user selects first item
+
+css
+Copy code
+
+This feature tests the functionality of searching for a product category and navigating through subcategories until an item's Product Details Page is displayed.
+
+## Background
+
+Background:
+Given User Navigates to SupplyHouse HomePage without being logged in
+
+css
+Copy code
+
+This background step sets the initial state for all scenarios in the feature file. The user navigates to the SupplyHouse homepage and is not logged in.
+
+## Test Scenario
+
+@WebTest
+Scenario Outline: Searching for item and navigating to item Product Details Page
+Given User Searches For <item>
+And User is navigated to item category select Page, selects first category on page and subsequent category pages, selects first item displayed
+Then Product details Page Corresponding with selected entry is displayed
+
+Examples:
+| item |
+... (all items to be searched)
+
+vbnet
+Copy code
+
+This `Scenario Outline` tests the functionality of searching for a product category and navigating through subcategories until an item's Product Details Page is displayed. The scenario is parameterized with different items to be searched. 
+
+- `Given` step: The user searches for a product category.
+- `And` step: The user navigates to the item category select page, selects the first category on the page and continues through subsequent category pages, and selects the first item displayed on the search results page.
+- `Then` step: The Product Details Page corresponding to the selected item is displayed.
+
+The `Examples` table provides all items to be searched.
+
+## Tags
+
+The `@WebTest` tag is used to categorize this test scenario as a web test. This can be helpful for filtering and running tests based on specific criteria or grouping.
+
+## Usage
+
+This feature file is part of a Selenium Java regression suite using the Cucumber framework. It should be executed with the appropriate test runner and environment setup.

@@ -159,8 +159,54 @@ public class ItemSearchSteps extends RunWeb{
 				);
 	}
 	
-	@Given("User is navigated to item category select Page, selects first category on page and subsequent category pages, selects first item displayed on search results page")
-	public void user_is_navigated_to_item_category_select_page_selects_first_category_on_page_and_subsequent_category_pages_selects_first_item_displayed_on_search_results_page() throws InterruptedException {
+//	@Given("User is navigated to item category select Page, selects first category on page and subsequent category pages, selects first item displayed on search results page")
+//	public void user_is_navigated_to_item_category_select_page_selects_first_category_on_page_and_subsequent_category_pages_selects_first_item_displayed_on_search_results_page() throws InterruptedException {
+//		int j = 0;
+//		while (j < 5) {
+//			String categoryName = c.getCategoryName(0);
+//			c.selectCategory(0);
+//		    if (ItemsByCategoryPage.isItemPage(driver)) {
+//		    	break;
+//		    }
+//		    c = new CategorySearchPage(driver);
+//		    String finalBreadCrumbValue = c.getFinalBreadCrumbText();
+//		    softAssert.assertTrue(
+//		    		finalBreadCrumbValue.toLowerCase().contains(categoryName.toLowerCase()),
+//		    		String.format(
+//							"Final Breadcrumb assertion failed: Expected '%s', but found '%s'. \n%s",
+//							categoryName.toLowerCase(),
+//							finalBreadCrumbValue.toLowerCase(),
+//							getFormattedScenarioParams()
+//							)
+//		    		);
+//			String pageTitle = c.getPageTitle();
+//			softAssert.assertTrue(
+//					pageTitle.toLowerCase().contains(categoryName.toLowerCase()),
+//					String.format(
+//							"Page Title assertion failed: Expected '%s', but found '%s'. \n%s",
+//							categoryName.toLowerCase(),
+//							pageTitle.toLowerCase(),
+//							getFormattedScenarioParams()
+//							)
+//					);
+//			j++;
+//	    }
+//		if (j == 5) {
+//			Assert.assertTrue(
+//					false,
+//					String.format(
+//							"Navigation to item Search results failed: \n%s",
+//							getFormattedScenarioParams()
+//							)
+//					);
+//		}
+//    	i = new ItemsByCategoryPage(driver);
+//	    selectedItemName = i.getItemOnPageName(0);
+//	    i.selectItemOnPage(0);
+//	}
+
+	@Given("User is navigated to item category select Page, selects first category on page and subsequent category pages, selects first item displayed")
+	public void user_is_navigated_to_item_category_select_page_selects_first_category_on_page_and_subsequent_category_pages_selects_first_item_displayed() throws InterruptedException {
 		int j = 0;
 		while (j < 5) {
 			String categoryName = c.getCategoryName(0);
@@ -203,11 +249,6 @@ public class ItemSearchSteps extends RunWeb{
     	i = new ItemsByCategoryPage(driver);
 	    selectedItemName = i.getItemOnPageName(0);
 	    i.selectItemOnPage(0);
-	}
-
-	@Given("User is navigated to item category select Page, selects first category on page and subsequent category pages, selects first item displayed")
-	public void user_is_navigated_to_item_category_select_page_selects_first_category_on_page_and_subsequent_category_pages_selects_first_item_displayed() throws InterruptedException {
-		
 	}
 	@Then("Product details Page Corresponding with selected entry is displayed") //Approved
 	public void product_details_page_corresponding_with_selected_entry_is_displayed() {
