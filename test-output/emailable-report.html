@@ -9,20 +9,21 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num">0</td><td class="num attn">3</td><td class="num">171,147</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">5</td><td class="num">0</td><td class="num attn">4</td><td class="num">225,278</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">features.SearchForItemTestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="3">1682993442969</td><td rowspan="3">36839</td></tr><tr class="failedeven"><td><a href="#m1">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m2">runScenario</a></td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">features.SearchForItemTestRunner</td><td><a href="#m3">runScenario</a></td><td rowspan="3">1682993395777</td><td rowspan="3">28831</td></tr><tr class="passedeven"><td><a href="#m4">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m5">runScenario</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="4">features.TestNGTestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="4">1683001470390</td><td rowspan="4">20863</td></tr><tr class="failedeven"><td><a href="#m1">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m2">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m3">runScenario</a></td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">features.TestNGTestRunner</td><td><a href="#m4">runScenario</a></td><td rowspan="5">1683001441155</td><td rowspan="5">14521</td></tr><tr class="passedeven"><td><a href="#m5">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m6">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m7">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m8">runScenario</a></td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">features.SearchForItemTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Searching for item and navigating to item Product Details Page&quot;</td><td>&quot;Search for a given product category and clicks subcategories until item selection is shown and user selects first item&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
-	Final Breadcrumb assertion failed: Expected &apos;faucet parts&apos;, but found &apos;faucet &amp; sink parts&apos;. 
+<h2>Default test</h2><h3 id="m0">features.TestNGTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Selecting category and navigating to item Product Details Page&quot;</td><td>&quot;User Selects category from navbar and clicks subcategories until item selection is shown and user selects first item&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	Selected Title assertion failed: Expected &apos;electronic air cleaner 20&quot; x 25&quot;&apos;, but found &apos;electronic air cleaner, 20x25&apos;. 
 Scenario Parameters: 
-item: Faucet Parts
+subCategory: Air Cleaners
+navbarCategory: HVAC
  expected [true] but found [false]
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
 	at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:266)
-	at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:10)
+	at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/CategoryNavBar.feature:10)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">features.SearchForItemTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Searching for item and navigating to item Product Details Page&quot;</td><td>&quot;Search for a given product category and clicks subcategories until item selection is shown and user selects first item&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+<h3 id="m1">features.TestNGTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Searching for item and navigating to item Product Details Page&quot;</td><td>&quot;Search for a given product category and clicks subcategories until item selection is shown and user selects first item&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
 	Selected Title assertion failed: Expected &apos;1/4&quot; 009qt rpz (bronze)&apos;, but found &apos;1/4&quot; bronze rpz (009qt)&apos;. 
 Scenario Parameters: 
 item: Backflow
@@ -31,7 +32,7 @@ item: Backflow
 	at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:266)
 	at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:10)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">features.SearchForItemTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Searching for item and navigating to item Product Details Page&quot;</td><td>&quot;Search for a given product category and clicks subcategories until item selection is shown and user selects first item&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+<h3 id="m2">features.TestNGTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Searching for item and navigating to item Product Details Page&quot;</td><td>&quot;Search for a given product category and clicks subcategories until item selection is shown and user selects first item&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
 	Page Title assertion failed: Expected &apos;drains&apos;, but found &apos;plumbing drainage&apos;. 
 Scenario Parameters: 
 item: Drains
@@ -40,8 +41,26 @@ item: Drains
 	at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:266)
 	at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:10)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">features.SearchForItemTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Searching for item and navigating to item Product Details Page&quot;</td><td>&quot;Search for a given product category and clicks subcategories until item selection is shown and user selects first item&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">features.SearchForItemTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Searching for item and navigating to item Product Details Page&quot;</td><td>&quot;Search for a given product category and clicks subcategories until item selection is shown and user selects first item&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">features.SearchForItemTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Searching for item and navigating to item Product Details Page&quot;</td><td>&quot;Search for a given product category and clicks subcategories until item selection is shown and user selects first item&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">features.TestNGTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Selecting trusted brand and making specifications in item catalog page&quot;</td><td>&quot;User Selects a trusted brand from homepage, adds specifications at item catalog, user is then shown results that match parameters&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Specifications not reflected in search results: 
+ Scenario Parameters: 
+reviewScore: null
+application: null
+material: null
+size: null
+inStockOnly: true
+priceRange: $2000 to $2500
+productType: Pump
+ expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at StepDefinitions.ItemSearchSteps.productDetailsPageIsDisplayed(ItemSearchSteps.java:119)
+	at ✽.Products with specifications are displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/BrandSelectWIthSpecificationsAdded.feature:11)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">features.TestNGTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Selecting category and navigating to item Product Details Page&quot;</td><td>&quot;User Selects category from navbar and clicks subcategories until item selection is shown and user selects first item&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">features.TestNGTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Searching for item and navigating to item Product Details Page&quot;</td><td>&quot;Search for a given product category and clicks subcategories until item selection is shown and user selects first item&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">features.TestNGTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Selecting category and navigating to item Product Details Page&quot;</td><td>&quot;User Selects category from navbar and clicks subcategories until item selection is shown and user selects first item&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">features.TestNGTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Searching for item and navigating to item Product Details Page&quot;</td><td>&quot;Search for a given product category and clicks subcategories until item selection is shown and user selects first item&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">features.TestNGTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Selecting category and navigating to item Product Details Page&quot;</td><td>&quot;User Selects category from navbar and clicks subcategories until item selection is shown and user selects first item&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon May 01 22:08:50 EDT 2023</td>
+<td>Started on:</td><td>Tue May 02 00:22:57 EDT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>171 seconds (171147 ms)</td>
+<tr><td>Total time:</td><td>225 seconds (225278 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,7 +75,67 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='features.SearchForItemTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.SearchForItemTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for a given product category and clicks subcategories until item selection is shown and user selects first item"</td>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Selecting trusted brand and making specifications in item catalog page", "User Selects a trusted brand from homepage, adds specifications at item catalog, user is then shown results that match parameters"</td>
+<td><div><pre>java.lang.AssertionError: Specifications not reflected in search results: 
+ Scenario Parameters: 
+reviewScore: null
+application: null
+material: null
+size: null
+inStockOnly: true
+priceRange: $2000 to $2500
+productType: Pump
+ expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at StepDefinitions.ItemSearchSteps.productDetailsPageIsDisplayed(ItemSearchSteps.java:119)
+	at ✽.Products with specifications are displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/BrandSelectWIthSpecificationsAdded.feature:11)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1989719972", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1989719972'><pre>java.lang.AssertionError: Specifications not reflected in search results: 
+ Scenario Parameters: 
+reviewScore: null
+application: null
+material: null
+size: null
+inStockOnly: true
+priceRange: $2000 to $2500
+productType: Pump
+ expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at StepDefinitions.ItemSearchSteps.productDetailsPageIsDisplayed(ItemSearchSteps.java:119)
+	at ✽.Products with specifications are displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/BrandSelectWIthSpecificationsAdded.feature:11)
+</pre></div></td>
+<td>30</td>
+<td>features.TestNGTestRunner@4f32a3ad</td></tr>
+<tr>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Selecting category and navigating to item Product Details Page", "User Selects category from navbar and clicks subcategories until item selection is shown and user selects first item"</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Selected Title assertion failed: Expected &apos;electronic air cleaner 20&quot; x 25&quot;&apos;, but found &apos;electronic air cleaner, 20x25&apos;. 
+Scenario Parameters: 
+subCategory: Air Cleaners
+navbarCategory: HVAC
+ expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:266)
+	at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/CategoryNavBar.feature:10)
+</pre></div><a href='#' onClick='toggleBox("stack-trace46351362", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace46351362'><pre>java.lang.AssertionError: The following asserts failed:
+	Selected Title assertion failed: Expected &apos;electronic air cleaner 20&quot; x 25&quot;&apos;, but found &apos;electronic air cleaner, 20x25&apos;. 
+Scenario Parameters: 
+subCategory: Air Cleaners
+navbarCategory: HVAC
+ expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:266)
+	at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/CategoryNavBar.feature:10)
+</pre></div></td>
+<td>20</td>
+<td>features.TestNGTestRunner@4f32a3ad</td></tr>
+<tr>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for a given product category and clicks subcategories until item selection is shown and user selects first item"</td>
 <td><div><pre>java.lang.AssertionError: The following asserts failed:
 	Selected Title assertion failed: Expected &apos;1/4&quot; 009qt rpz (bronze)&apos;, but found &apos;1/4&quot; bronze rpz (009qt)&apos;. 
 Scenario Parameters: 
@@ -84,8 +144,8 @@ item: Backflow
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
 	at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:266)
 	at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:10)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2055422401", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2055422401'><pre>java.lang.AssertionError: The following asserts failed:
+</pre></div><a href='#' onClick='toggleBox("stack-trace1374896517", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1374896517'><pre>java.lang.AssertionError: The following asserts failed:
 	Selected Title assertion failed: Expected &apos;1/4&quot; 009qt rpz (bronze)&apos;, but found &apos;1/4&quot; bronze rpz (009qt)&apos;. 
 Scenario Parameters: 
 item: Backflow
@@ -94,10 +154,10 @@ item: Backflow
 	at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:266)
 	at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:10)
 </pre></div></td>
-<td>45</td>
-<td>features.SearchForItemTestRunner@312aa7c</td></tr>
+<td>26</td>
+<td>features.TestNGTestRunner@4f32a3ad</td></tr>
 <tr>
-<td title='features.SearchForItemTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.SearchForItemTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for a given product category and clicks subcategories until item selection is shown and user selects first item"</td>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for a given product category and clicks subcategories until item selection is shown and user selects first item"</td>
 <td><div><pre>java.lang.AssertionError: The following asserts failed:
 	Page Title assertion failed: Expected &apos;drains&apos;, but found &apos;plumbing drainage&apos;. 
 Scenario Parameters: 
@@ -106,8 +166,8 @@ item: Drains
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
 	at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:266)
 	at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:10)
-</pre></div><a href='#' onClick='toggleBox("stack-trace521311335", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace521311335'><pre>java.lang.AssertionError: The following asserts failed:
+</pre></div><a href='#' onClick='toggleBox("stack-trace879319843", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace879319843'><pre>java.lang.AssertionError: The following asserts failed:
 	Page Title assertion failed: Expected &apos;drains&apos;, but found &apos;plumbing drainage&apos;. 
 Scenario Parameters: 
 item: Drains
@@ -116,30 +176,8 @@ item: Drains
 	at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:266)
 	at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:10)
 </pre></div></td>
-<td>18</td>
-<td>features.SearchForItemTestRunner@312aa7c</td></tr>
-<tr>
-<td title='features.SearchForItemTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.SearchForItemTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for a given product category and clicks subcategories until item selection is shown and user selects first item"</td>
-<td><div><pre>java.lang.AssertionError: The following asserts failed:
-	Final Breadcrumb assertion failed: Expected &apos;faucet parts&apos;, but found &apos;faucet &amp; sink parts&apos;. 
-Scenario Parameters: 
-item: Faucet Parts
- expected [true] but found [false]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-	at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:266)
-	at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:10)
-</pre></div><a href='#' onClick='toggleBox("stack-trace142561311", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace142561311'><pre>java.lang.AssertionError: The following asserts failed:
-	Final Breadcrumb assertion failed: Expected &apos;faucet parts&apos;, but found &apos;faucet &amp; sink parts&apos;. 
-Scenario Parameters: 
-item: Faucet Parts
- expected [true] but found [false]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-	at StepDefinitions.ItemSearchSteps.product_details_page_corresponding_with_selected_entry_is_displayed(ItemSearchSteps.java:266)
-	at ✽.Product details Page Corresponding with selected entry is displayed(file:///C:/Users/lordr/AppiumWorkspace/AmazonFramework/Automation/src/test/java/features/SearchForItem.feature:10)
-</pre></div></td>
-<td>36</td>
-<td>features.SearchForItemTestRunner@312aa7c</td></tr>
+<td>35</td>
+<td>features.TestNGTestRunner@4f32a3ad</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -149,20 +187,30 @@ item: Faucet Parts
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='features.SearchForItemTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.SearchForItemTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for a given product category and clicks subcategories until item selection is shown and user selects first item"</td>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Selecting category and navigating to item Product Details Page", "User Selects category from navbar and clicks subcategories until item selection is shown and user selects first item"</td>
 <td></td>
-<td>18</td>
-<td>features.SearchForItemTestRunner@312aa7c</td></tr>
+<td>32</td>
+<td>features.TestNGTestRunner@4f32a3ad</td></tr>
 <tr>
-<td title='features.SearchForItemTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.SearchForItemTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for a given product category and clicks subcategories until item selection is shown and user selects first item"</td>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Selecting category and navigating to item Product Details Page", "User Selects category from navbar and clicks subcategories until item selection is shown and user selects first item"</td>
 <td></td>
-<td>28</td>
-<td>features.SearchForItemTestRunner@312aa7c</td></tr>
+<td>14</td>
+<td>features.TestNGTestRunner@4f32a3ad</td></tr>
 <tr>
-<td title='features.SearchForItemTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.SearchForItemTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for a given product category and clicks subcategories until item selection is shown and user selects first item"</td>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Selecting category and navigating to item Product Details Page", "User Selects category from navbar and clicks subcategories until item selection is shown and user selects first item"</td>
 <td></td>
-<td>22</td>
-<td>features.SearchForItemTestRunner@312aa7c</td></tr>
+<td>14</td>
+<td>features.TestNGTestRunner@4f32a3ad</td></tr>
+<tr>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for a given product category and clicks subcategories until item selection is shown and user selects first item"</td>
+<td></td>
+<td>34</td>
+<td>features.TestNGTestRunner@4f32a3ad</td></tr>
+<tr>
+<td title='features.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: features.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for item and navigating to item Product Details Page", "Search for a given product category and clicks subcategories until item selection is shown and user selects first item"</td>
+<td></td>
+<td>14</td>
+<td>features.TestNGTestRunner@4f32a3ad</td></tr>
 </table><p>
 </body>
 </html>
