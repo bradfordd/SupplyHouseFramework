@@ -201,6 +201,7 @@ This feature file is part of a Selenium Java regression suite using the Cucumber
 ```java
 public class CategorySearchPage extends BasePageObject {
 CategorySearchPage extends the BasePageObject class.
+```
 
 ## Fields
 
@@ -208,6 +209,7 @@ CategorySearchPage extends the BasePageObject class.
 protected final String itemCategoriesXpath = "//a[@color='blueLink' and @font-weight='bold']/div[2]/span[1]";
 protected final String pageTitleXpath = "//h1[@font-size='22,,24,,34']";
 protected final String breadcrumbsXpath = "//div[contains(@class, 'Box-sc-1z9git-0 hzZBOh')]";
+```
 
 The class has fields for the WebDriver, XPath selectors for item categories, page title, and breadcrumbs.
 
@@ -252,5 +254,5 @@ List<WebElement> breadcrumbs;
 
 These @FindBy annotations define WebElement instances corresponding to the item categories, page title, and breadcrumbs.
 
-##Usage:
+## Usage:
 This CategorySearchPage class should be used in a Selenium Java test suite using the Page Object Model pattern. It allows for interacting with the Category Search Page and makes it easier to write maintainable and readable test code.
