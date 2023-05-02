@@ -172,3 +172,81 @@ The `@WebTest` tag is used to categorize this test scenario as a web test. This 
 ## Usage
 
 This feature file is part of a Selenium Java regression suite using the Cucumber framework. It should be executed with the appropriate test runner and environment setup.
+
+
+This `Scenario Outline` tests the functionality of selecting a trusted brand from the homepage, adding specifications in the item catalog page, and displaying results that match the specified parameters. The scenario is parameterized with different combinations of parameters.
+
+- `Given` step: The user selects a trusted brand from the homepage.
+- `And` step: The user selects the following parameters: In Stock Only, Product Type, Price Range, Review Score, Application, Material, Size.
+- `Then` step: Products with the specified parameters are displayed.
+
+The `Examples` table provides all combinations of parameters to be tested.
+
+## Tags
+
+The `@WebTest` tag is used to categorize this test scenario as a web test. This can be helpful for filtering and running tests based on specific criteria or grouping.
+
+## Usage
+
+This feature file is part of a Selenium Java regression suite using the Cucumber framework. It should be executed with the appropriate test runner and environment setup.
+
+
+
+# CategorySearchPage.java Documentation
+
+`CategorySearchPage` is a Page Object Model class that represents the Category Search Page of the SupplyHouse web application. It provides methods to interact with the page's elements, such as selecting a category, getting the number of categories, and interacting with breadcrumbs.
+
+## Class Definition
+
+```java
+public class CategorySearchPage extends BasePageObject {
+CategorySearchPage extends the BasePageObject class.
+
+## Fields
+
+```protected WebDriver driver;
+protected final String itemCategoriesXpath = "//a[@color='blueLink' and @font-weight='bold']/div[2]/span[1]";
+protected final String pageTitleXpath = "//h1[@font-size='22,,24,,34']";
+protected final String breadcrumbsXpath = "//div[contains(@class, 'Box-sc-1z9git-0 hzZBOh')]";
+
+The class has fields for the WebDriver, XPath selectors for item categories, page title, and breadcrumbs.
+
+## Constructor
+
+```public CategorySearchPage(WebDriver driver) throws InterruptedException {
+	super(driver);
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+	wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(pageTitleXpath)));
+	wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(itemCategoriesXpath)));
+	wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath(breadcrumbsXpath)));
+	PageFactory.initElements(driver, this);
+}
+The constructor initializes the CategorySearchPage instance by calling the superclass constructor and waiting for the required elements to be present on the page. Then, it initializes the instance's fields using the PageFactory class.
+
+## Methods
+
+```selectCategory(int i): Selects a category by its index.
+getCategoryName(int i): Returns the name of a category by its index.
+getNumberOfCategories(): Returns the number of categories on the page.
+getCategoryValues(): Returns an ArrayList of category names.
+getNumberOfBreadCrumbs(): Returns the number of breadcrumbs on the page.
+getPageTitle(): Returns the page title text.
+getBreadCrumbText(): Returns an ArrayList of breadcrumb texts.
+getFinalBreadCrumbText(): Returns the text of the final breadcrumb.
+getExpectedUrlText(String item): Returns a formatted version of the input item that is expected to be used as part of a URL.
+
+##Page Factory Elements
+
+```@FindBy(xpath=itemCategoriesXpath)
+List<WebElement> itemCategories;
+
+```@FindBy(xpath=pageTitleXpath)
+WebElement pageTitle;
+
+```@FindBy(xpath=breadcrumbsXpath)
+List<WebElement> breadcrumbs;
+
+These @FindBy annotations define WebElement instances corresponding to the item categories, page title, and breadcrumbs.
+
+##Usage:
+This CategorySearchPage class should be used in a Selenium Java test suite using the Page Object Model pattern. It allows for interacting with the Category Search Page and makes it easier to write maintainable and readable test code.
